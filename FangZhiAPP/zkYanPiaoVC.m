@@ -9,7 +9,7 @@
 #import "zkYanPiaoVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
-//#import <MJRefresh.h>
+#import <MJRefresh.h>
 #import "UIView+KKEB.h"
 
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
@@ -90,13 +90,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(10, 2, 40, 40)];
-    [button setImage:[UIImage imageNamed:@"cha"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    if (SSSSBarH > 20) {
-        button.y = 46;
-    }
+ 
     
     
     
@@ -140,14 +134,18 @@
     [self.imageView addSubview:self.dongHuaImgV];
     self.imageView.clipsToBounds = YES;
     
-    [UIView animateWithDuration:3 delay:1 options:UIViewAnimationOptionRepeat animations:^{
-        
-        self.dongHuaImgV.y = frame.size.height;
-        
+    
+    
+    
+//    self.dongHuaImgV.y = 0;
+    
+    [UIView animateWithDuration:3 delay:1 options:(UIViewAnimationOptionRepeat) animations:^{
+         self.dongHuaImgV.mj_y = ScreenW - 120;
     } completion:^(BOOL finished) {
-        self.dongHuaImgV.y = -260;
-        
+         self.dongHuaImgV.mj_y = -260;
     }];
+    
+   
     
     
     // 1.创建捕捉会话
@@ -209,7 +207,7 @@
     [phoneBt addTarget:self action:@selector(phoneAction) forControlEvents:UIControlEventTouchUpInside];
     [phoneBt setBackgroundImage:[UIImage imageNamed:@"zk_xiangce"] forState:UIControlStateNormal];
     //此处把相册功能关闭
-//    [self.view addSubview:phoneBt];
+    [self.view addSubview:phoneBt];
     
     
     UIButton * kaiGuanBt =[UIButton buttonWithType:UIButtonTypeCustom];
@@ -220,6 +218,11 @@
     [self.view addSubview:kaiGuanBt];
     
     
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(10, SSSSBarH + 2, 40, 40)];
+    [button setImage:[UIImage imageNamed:@"cha"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
     [self.view.layer addSublayer:self.containerLayer];
     //描边图层
     self.containerLayer.frame = self.view.bounds;

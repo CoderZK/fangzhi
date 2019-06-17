@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E77AE8AC64D48BF3ACE1EA0 /* libPods-FangZhiAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */; };
 		583041AD22B733AD00B4BE42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041AC22B733AD00B4BE42 /* AppDelegate.m */; };
 		583041B022B733AD00B4BE42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041AF22B733AD00B4BE42 /* ViewController.m */; };
 		583041B322B733AD00B4BE42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583041B122B733AD00B4BE42 /* Main.storyboard */; };
@@ -57,6 +58,9 @@
 		583041DE22B7348300B4BE42 /* UIView+KKEB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKEB.m"; sourceTree = "<group>"; };
 		583041E022B7384400B4BE42 /* zkYanPiaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkYanPiaoVC.h; sourceTree = "<group>"; };
 		583041E122B7384400B4BE42 /* zkYanPiaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkYanPiaoVC.m; sourceTree = "<group>"; };
+		92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FangZhiAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F26A2A6126F8EDBB7A89D9 /* Pods-FangZhiAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FangZhiAPP.debug.xcconfig"; path = "Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		A9C1943427FC5D27897B5847 /* Pods-FangZhiAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FangZhiAPP.release.xcconfig"; path = "Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E77AE8AC64D48BF3ACE1EA0 /* libPods-FangZhiAPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174E18060AEF53FEA2F31498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5830419F22B733AD00B4BE42 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,8 @@
 				583041C322B733AF00B4BE42 /* FangZhiAPPTests */,
 				583041CE22B733AF00B4BE42 /* FangZhiAPPUITests */,
 				583041A922B733AD00B4BE42 /* Products */,
+				7352B5F92401BA0E741B916F /* Pods */,
+				174E18060AEF53FEA2F31498 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +157,16 @@
 			path = FangZhiAPPUITests;
 			sourceTree = "<group>";
 		};
+		7352B5F92401BA0E741B916F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3F26A2A6126F8EDBB7A89D9 /* Pods-FangZhiAPP.debug.xcconfig */,
+				A9C1943427FC5D27897B5847 /* Pods-FangZhiAPP.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 583041D422B733AF00B4BE42 /* Build configuration list for PBXNativeTarget "FangZhiAPP" */;
 			buildPhases = (
+				393DA1AC8176CE131F8AD62E /* [CP] Check Pods Manifest.lock */,
 				583041A422B733AD00B4BE42 /* Sources */,
 				583041A522B733AD00B4BE42 /* Frameworks */,
 				583041A622B733AD00B4BE42 /* Resources */,
+				54B64FBBFE0E9A35FE6078B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +293,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		393DA1AC8176CE131F8AD62E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FangZhiAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54B64FBBFE0E9A35FE6078B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		583041A422B733AD00B4BE42 /* Sources */ = {
@@ -445,6 +514,7 @@
 		};
 		583041D522B733AF00B4BE42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F26A2A6126F8EDBB7A89D9 /* Pods-FangZhiAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -463,6 +533,7 @@
 		};
 		583041D622B733AF00B4BE42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C1943427FC5D27897B5847 /* Pods-FangZhiAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
