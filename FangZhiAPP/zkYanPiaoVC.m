@@ -9,7 +9,7 @@
 #import "zkYanPiaoVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
-#import <MJRefresh.h>
+//#import <MJRefresh.h>
 #import "UIView+KKEB.h"
 
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
@@ -68,7 +68,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self.session stopRunning];
 }
 
@@ -90,7 +90,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
- 
+    
     
     
     
@@ -107,16 +107,16 @@
         
         [self presentViewController:alertVC animated:YES completion:nil];
     }
-
+    
     self.navigationItem.title = @"扫一扫";
-//    UIButton * leftBt =[UIButton buttonWithType:UIButtonTypeCustom];
-//    leftBt.frame = CGRectMake(0, 0, 24, 24);
-//    [leftBt setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-//    [leftBt addTarget:self action:@selector(itemAction:) forControlEvents:UIControlEventTouchUpInside];
-//    leftBt.tag = 255;
-//    UIBarButtonItem * leftItme =[[UIBarButtonItem alloc] initWithCustomView:leftBt];
-//    self.navigationItem.leftBarButtonItem = leftItme;
-//    
+    //    UIButton * leftBt =[UIButton buttonWithType:UIButtonTypeCustom];
+    //    leftBt.frame = CGRectMake(0, 0, 24, 24);
+    //    [leftBt setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    //    [leftBt addTarget:self action:@selector(itemAction:) forControlEvents:UIControlEventTouchUpInside];
+    //    leftBt.tag = 255;
+    //    UIBarButtonItem * leftItme =[[UIBarButtonItem alloc] initWithCustomView:leftBt];
+    //    self.navigationItem.leftBarButtonItem = leftItme;
+    //
     
     self.imageView =[[UIImageView alloc] initWithFrame:CGRectMake(60, 150 , ScreenW - 120, ScreenW - 120)];
     self.imageView.image =[UIImage imageNamed:@"zk_kuang"];
@@ -124,28 +124,26 @@
     self.imageView.backgroundColor =[UIColor colorWithWhite:0 alpha:0];
     
     self.view.backgroundColor =[UIColor blackColor];
-
+    
     CGRect frame = self.imageView.frame;
-
+    
     self.dongHuaImgV =[[UIImageView alloc] initWithFrame:CGRectMake(0, -260, frame.size.width, 260)];
     self.dongHuaImgV.contentMode = UIViewContentModeScaleAspectFit;
     self.dongHuaImgV.image =[UIImage imageNamed:@"zk_wangge"];
     
     [self.imageView addSubview:self.dongHuaImgV];
     self.imageView.clipsToBounds = YES;
+ 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:3 delay:1 options: UIViewAnimationOptionRepeat animations:^{
+            self.dongHuaImgV.y = frame.size.height;
+        } completion:^(BOOL finished) {
+            self.dongHuaImgV.y = -260;
+        }];
+    });
     
     
     
-    
-//    self.dongHuaImgV.y = 0;
-    
-    [UIView animateWithDuration:3 delay:1 options:(UIViewAnimationOptionRepeat) animations:^{
-         self.dongHuaImgV.mj_y = ScreenW - 120;
-    } completion:^(BOOL finished) {
-         self.dongHuaImgV.mj_y = -260;
-    }];
-    
-   
     
     
     // 1.创建捕捉会话
@@ -222,18 +220,18 @@
     [button setImage:[UIImage imageNamed:@"cha"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-
+    
     [self.view.layer addSublayer:self.containerLayer];
     //描边图层
     self.containerLayer.frame = self.view.bounds;
     //预览图层
     self.layer = layer;
-
+    
     
     // 5.开始扫描
     [session startRunning];
     
-
+    
     
 }
 
@@ -260,7 +258,7 @@
 
 //代开闪关灯
 - (void)kaidengAction:(UIButton *)sender{
-
+    
     sender.selected = !sender.selected;
     if (sender.isSelected == YES) { //打开闪光灯
         AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -312,26 +310,32 @@
         //只要扫描到数据就会调用的
         self.customLabel.text = object.stringValue;
         
-        if ([object.stringValue hasPrefix:@"FM-"]) {
-            
- 
-            
-        }else {
-            
-          
-            return;
+        if (self.sendStrBlock != nil) {
+            self.sendStrBlock(object.stringValue);
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
-  
+        
+        
+        //        if ([object.stringValue hasPrefix:@"FM-"]) {
+        //
+        //
+        //
+        //        }else {
+        //
+        //
+        //            return;
+        //        }
+        //
         
         NSLog(@"=========%@",object.stringValue);
-//        [self.dataArray removeAllObjects];
-//        self.dataArray = [object.stringValue componentsSeparatedByString:@"&"].mutableCopy;
-//
-//        NSArray * arr = [self.dataArray[0] componentsSeparatedByString:@"="];
-//
-//        self.dingDanID = [arr lastObject];
-//
-//        [self yanPiaoAction];
+        //        [self.dataArray removeAllObjects];
+        //        self.dataArray = [object.stringValue componentsSeparatedByString:@"&"].mutableCopy;
+        //
+        //        NSArray * arr = [self.dataArray[0] componentsSeparatedByString:@"="];
+        //
+        //        self.dingDanID = [arr lastObject];
+        //
+        //        [self yanPiaoAction];
         
         // 清除之前的描边
         // [self clearLayers];
@@ -352,7 +356,7 @@
     //取出图片
     //取出图片,要进行处理
     UIImage * image =[self resizeImage:info[UIImagePickerControllerOriginalImage]];
-
+    
     CIImage *ciImage = [[CIImage alloc] initWithImage:image];
     //2.0从选中的图片读取二维码数据
     //2.1 创建一个探视器
@@ -372,11 +376,11 @@
         self.dingDanID = [arr lastObject];
         [self yanPiaoAction];
         
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr] options:@{@"1251":@121} completionHandler:^(BOOL success) {
-//            
-//            
-//        }];
-//        
+        //        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr] options:@{@"1251":@121} completionHandler:^(BOOL success) {
+        //
+        //
+        //        }];
+        //
         
     }
     // 注意: 如果实现了该方法, 当选中一张图片时系统就不会自动关闭相册控制器
@@ -430,9 +434,9 @@
 
 //跳转用
 - (void)yanPiaoAction {
-//    [ZKLoading show];
+    //    [ZKLoading show];
     
-   
+    
     
 }
 
@@ -453,13 +457,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

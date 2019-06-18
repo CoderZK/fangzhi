@@ -167,7 +167,11 @@
     _context[@"js2java"] = ^() {
         
         zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
-        
+        vc.sendStrBlock = ^(NSString *str) {
+            
+           [weakSelf.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alertMessage('%@')",str]];
+            
+        };
         [weakSelf presentViewController:vc animated:YES completion:nil];
 
         

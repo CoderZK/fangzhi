@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E77AE8AC64D48BF3ACE1EA0 /* libPods-FangZhiAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */; };
 		583041AD22B733AD00B4BE42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041AC22B733AD00B4BE42 /* AppDelegate.m */; };
 		583041B022B733AD00B4BE42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041AF22B733AD00B4BE42 /* ViewController.m */; };
 		583041B322B733AD00B4BE42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583041B122B733AD00B4BE42 /* Main.storyboard */; };
@@ -18,6 +17,7 @@
 		583041D022B733AF00B4BE42 /* FangZhiAPPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041CF22B733AF00B4BE42 /* FangZhiAPPUITests.m */; };
 		583041DF22B7348300B4BE42 /* UIView+KKEB.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041DE22B7348300B4BE42 /* UIView+KKEB.m */; };
 		583041E222B7384400B4BE42 /* zkYanPiaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041E122B7384400B4BE42 /* zkYanPiaoVC.m */; };
+		8ECE66DE6BD4CFB979349AEC /* libPods-FangZhiAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E77AE8AC64D48BF3ACE1EA0 /* libPods-FangZhiAPP.a in Frameworks */,
+				8ECE66DE6BD4CFB979349AEC /* libPods-FangZhiAPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +163,6 @@
 				A3F26A2A6126F8EDBB7A89D9 /* Pods-FangZhiAPP.debug.xcconfig */,
 				A9C1943427FC5D27897B5847 /* Pods-FangZhiAPP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -518,15 +517,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4BV757895B;
+				DEVELOPMENT_TEAM = ZSL4MW2WKS;
 				INFOPLIST_FILE = FangZhiAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zk.FangZhiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = ComDev;
+				PROVISIONING_PROFILE_SPECIFIER = xxxxx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -537,15 +537,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZSL4MW2WKS;
 				INFOPLIST_FILE = FangZhiAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zk.FangZhiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = xxxxx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
