@@ -17,6 +17,7 @@
 		583041D022B733AF00B4BE42 /* FangZhiAPPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041CF22B733AF00B4BE42 /* FangZhiAPPUITests.m */; };
 		583041DF22B7348300B4BE42 /* UIView+KKEB.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041DE22B7348300B4BE42 /* UIView+KKEB.m */; };
 		583041E222B7384400B4BE42 /* zkYanPiaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041E122B7384400B4BE42 /* zkYanPiaoVC.m */; };
+		666C94C922B930CF00296120 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */; };
 		8ECE66DE6BD4CFB979349AEC /* libPods-FangZhiAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		583041DE22B7348300B4BE42 /* UIView+KKEB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKEB.m"; sourceTree = "<group>"; };
 		583041E022B7384400B4BE42 /* zkYanPiaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkYanPiaoVC.h; sourceTree = "<group>"; };
 		583041E122B7384400B4BE42 /* zkYanPiaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkYanPiaoVC.m; sourceTree = "<group>"; };
+		666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
+		666C94C822B930CF00296120 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FangZhiAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F26A2A6126F8EDBB7A89D9 /* Pods-FangZhiAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FangZhiAPP.debug.xcconfig"; path = "Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		A9C1943427FC5D27897B5847 /* Pods-FangZhiAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FangZhiAPP.release.xcconfig"; path = "Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ECE66DE6BD4CFB979349AEC /* libPods-FangZhiAPP.a in Frameworks */,
+				666C94C922B930CF00296120 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +126,7 @@
 		583041AA22B733AD00B4BE42 /* FangZhiAPP */ = {
 			isa = PBXGroup;
 			children = (
+				666C94C622B930CF00296120 /* UMessage_Sdk_1.3.0 */,
 				583041E022B7384400B4BE42 /* zkYanPiaoVC.h */,
 				583041E122B7384400B4BE42 /* zkYanPiaoVC.m */,
 				583041DD22B7348300B4BE42 /* UIView+KKEB.h */,
@@ -155,6 +160,15 @@
 				583041D122B733AF00B4BE42 /* Info.plist */,
 			);
 			path = FangZhiAPPUITests;
+			sourceTree = "<group>";
+		};
+		666C94C622B930CF00296120 /* UMessage_Sdk_1.3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */,
+				666C94C822B930CF00296120 /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.3.0;
 			sourceTree = "<group>";
 		};
 		7352B5F92401BA0E741B916F /* Pods */ = {
@@ -524,6 +538,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FangZhiAPP/UMessage_Sdk_1.3.0",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zk.FangZhiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = xxxxx;
@@ -543,6 +561,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FangZhiAPP/UMessage_Sdk_1.3.0",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zk.FangZhiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";

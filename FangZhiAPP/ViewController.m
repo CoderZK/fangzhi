@@ -12,6 +12,8 @@
 #import <AddressBook/AddressBook.h>
 #import <Contacts/Contacts.h>
 #import "zkYanPiaoVC.h"
+#import <UMSocialCore/UMSocialCore.h>
+#import <UShareUI/UShareUI.h>
 
 
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
@@ -213,6 +215,79 @@
     NSInteger num = 520;//准备传去给JS的参数
     [_webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"bbb('%@','%ld');",name,num]];
 }
+
+
+- (void)shareWithSetPreDefinePlatforms:(NSArray *)platforms withArr:(NSArray *)arr {
+    
+    
+    
+    [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine),@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ)]];
+    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+        [self shareImageAndTextToPlatformType:platformType withArr:arr];
+    }];
+    
+    
+    
+}
+
+
+//分享
+- (void)shareImageAndTextToPlatformType:(UMSocialPlatformType)platformType withArr:(NSArray *)arr
+{
+    NSString * url = @"";
+    NSString *title = @"共享用";
+    NSString * logoStr = @"";
+    NSString *descStr = @"最好的app等你来玩!";
+    if (arr.count > 0) {
+        title = [NSString stringWithFormat:@"%@",arr[0]];
+    }
+    if (arr.count > 1) {
+        descStr = [NSString stringWithFormat:@"%@",arr[1]];
+    }
+    if (arr.count > 2) {
+        logoStr = [NSString stringWithFormat:@"%@",arr[2]];
+    }
+    if (arr.count > 3) {
+        url = [NSString stringWithFormat:@"%@",arr[3]];
+    }
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    if ([url hasSuffix:@".jpg"] || [url hasSuffix:@".JPG"] || [url hasSuffix:@".jpeg"] || [url hasSuffix:@".JPEG"] || [url hasSuffix:@".gif"] || [url hasSuffix:@".GIF"] || [url hasSuffix:@".png"]|| [url hasSuffix:@".PNG"] || [url hasSuffix:@".bmp"] || [url hasSuffix:@".BMP"]) {
+        //设置文本
+        messageObject.text = @"社会化组件UShare将各大社交平台接入您的应用，快速武装App。";
+        //创建图片内容对象
+        UMShareImageObject *shareObject = [[UMShareImageObject alloc] init];
+        //如果有缩略图，则设置缩略图
+        if (logoStr.length == 0 || [logoStr isEqualToString:@"(null)"] || [logoStr isEqualToString:@"<null>"] || [logoStr isEqualToString:@"[object Object]"]) {
+            shareObject.thumbImage = [UIImage imageNamed:@"logo"];
+        }else {
+            shareObject.thumbImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:logoStr]]];;
+        }
+        UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+        [shareObject setShareImage:image];
+        messageObject.shareObject = shareObject;
+    }else {
+        //创建网页内容对象
+        UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:descStr thumImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:logoStr]]]];
+        if (logoStr.length == 0 || [logoStr isEqualToString:@"(null)"] || [logoStr isEqualToString:@"<null>"] ) {
+            shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:descStr thumImage:[UIImage imageNamed:@"logo"]];
+        }
+        //设置网页地址
+        shareObject.webpageUrl =url;
+        //分享消息对象设置分享内容对象
+        messageObject.shareObject = shareObject;
+    }
+    
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            NSLog(@"response data is %@",data);
+        }
+    }];
+}
+
 
 
 

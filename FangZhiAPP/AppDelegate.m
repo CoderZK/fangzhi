@@ -8,6 +8,18 @@
 
 #import "AppDelegate.h"
 #import <AdSupport/AdSupport.h>
+#import <UShareUI/UShareUI.h>
+#import "UMessage.h"
+
+#define UMKey @"5ce3d9d50cafb213130006e0"
+//友盟安全密钥//quvss8rcpv3jahqyajgeuspa6o1vdeqr
+#define SinaAppKey @"102135063"
+#define SinaAppSecret @"47a31952aed883dc13cdccaf9b30df0d"
+#define QQAppID @"101504727"
+#define QQAppKey @"2e7928e5d1e2974eb06a35fa408e0950"
+#define WXAppID @"wxe68b61e47e500548"
+#define WXAppSecret @"96405f2eddb5e6cd8e6e01c87bbda8fb"
+
 @interface AppDelegate ()
 
 @end
@@ -26,7 +38,21 @@
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:newUserAgent, @"UserAgent", nil];
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
     
+    [[UMSocialManager defaultManager] setUmSocialAppkey:UMKey];
+    
+    [self configUSharePlatforms];
+    
+    
     return YES;
+}
+
+
+
+- (void)configUSharePlatforms
+{
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXAppID appSecret:WXAppSecret redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQAppID/*设置QQ平台的appID*/  appSecret:QQAppKey redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:SinaAppKey  appSecret:SinaAppSecret redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
 }
 
 
