@@ -10,6 +10,7 @@
 #import <AdSupport/AdSupport.h>
 #import <UShareUI/UShareUI.h>
 #import "UMessage.h"
+#import "ViewController.h"
 
 #define UMKey @"5ce3d9d50cafb213130006e0"
 //友盟安全密钥//quvss8rcpv3jahqyajgeuspa6o1vdeqr
@@ -29,6 +30,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController* vc = [[ViewController alloc] init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
     
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
     NSString *userAgent = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
