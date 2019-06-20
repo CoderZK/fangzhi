@@ -22,6 +22,8 @@
 #define  URLURL @"http://www.movida-italy.com/app/index.asp"
 
 
+
+
 @interface ViewController ()<UIWebViewDelegate>
 @property (nonatomic,weak) JSContext * context;
 @property(nonatomic,strong)UIButton *settingBt;
@@ -33,13 +35,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //手机系统版本：9.1
+
     UIWebView * web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH)];
     [self.view addSubview: web];
     self.webView = web;
     self.view.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
     web.delegate = self;
     web.backgroundColor = [UIColor whiteColor];
-    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URLURL]]];
+    
+    //设备ID
+    NSString *device = [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] identifierForVendor]];
+    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imei=%@",URLURL,device]]]];
     web.scrollView.bounces = NO;
     
     web.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
