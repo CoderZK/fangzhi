@@ -14,7 +14,8 @@
 #import "zkYanPiaoVC.h"
 #import <UMSocialCore/UMSocialCore.h>
 #import <UShareUI/UShareUI.h>
-
+#import "zkShowVIew.h"
+#import <MJRefresh.h>
 
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
@@ -22,23 +23,53 @@
 #define  URLURL @"http://www.movida-italy.com/app/index.asp"
 
 
+<<<<<<< HEAD
 
 
 @interface ViewController ()<UIWebViewDelegate>
+=======
+@interface ViewController ()<UIWebViewDelegate,zkShowVIewDelegate>
+>>>>>>> a4f080df187ed3a84a5de7653f5ab1556695880a
 @property (nonatomic,weak) JSContext * context;
 @property(nonatomic,strong)UIButton *settingBt;
 @property(nonatomic,strong)UIView *backV;
 @property(nonatomic,strong)NSArray *dataArray;
+/** s */
+@property(nonatomic , strong)zkShowVIew *showView;
+/**  */
+@property(nonatomic , strong)UIView *backView;
+/**  */
+@property(nonatomic , assign)BOOL isShow;
 @end
 
 @implementation ViewController
 
+-(zkShowVIew *)showView {
+    if (_showView == nil) {
+        _showView = [[zkShowVIew alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH-45)];
+        if (SSSSBarH>20) {
+            _showView.mj_h = HHHHHH - 45-34;
+        }
+        _showView.deleate = self;
+    }
+    return _showView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+<<<<<<< HEAD
     //手机系统版本：9.1
 
     UIWebView * web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH)];
+=======
+  
+    
+    UIWebView * web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH-45)];
+    if (SSSSBarH > 20) {
+        web.mj_h = HHHHHH - 45 - 34;
+    }
+>>>>>>> a4f080df187ed3a84a5de7653f5ab1556695880a
     [self.view addSubview: web];
     self.webView = web;
     self.view.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
@@ -53,12 +84,12 @@
     web.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
     //    web.backgroundColor =[UIColor redColor];
     
-    self.backV = [[UIView alloc] initWithFrame:CGRectMake(WWWWW - 60 - 10, HHHHHH  - 15 - 60 - 49 - 120 , 60, 180)];
-    if (SSSSBarH > 20) {
-        self.backV.frame = CGRectMake(WWWWW - 60 - 10, HHHHHH  - 34 - 15 - 60 - 49 - 120 , 70, 180);
-        web.frame = CGRectMake(0, SSSSBarH, WWWWW, HHHHHH - SSSSBarH - 34);
-    }
-    [self.view addSubview:self.backV];
+//    self.backV = [[UIView alloc] initWithFrame:CGRectMake(WWWWW - 60 - 10, HHHHHH  - 15 - 60 - 49 - 120 , 60, 180)];
+//    if (SSSSBarH > 20) {
+//        self.backV.frame = CGRectMake(WWWWW - 60 - 10, HHHHHH  - 34 - 15 - 60 - 49 - 120 , 70, 180);
+//        web.frame = CGRectMake(0, SSSSBarH, WWWWW, HHHHHH - SSSSBarH - 34);
+//    }
+//    [self.view addSubview:self.backV];
 //    UIImageView * imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
 //    imageV.userInteractionEnabled = YES;
 //    imageV.image = [UIImage imageNamed:@"kk_zuoyou"];
@@ -75,6 +106,26 @@
 //        [button addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
 //        [self.backV addSubview:button];
 //    }
+    
+    
+
+    
+    self.backV = [[UIView alloc] initWithFrame:CGRectMake(0, HHHHHH-40, WWWWW, 45)];
+    self.backV.backgroundColor =[UIColor blackColor];
+    [self.view addSubview:self.backV];
+    
+    UIButton * leftbb =[[UIButton alloc] initWithFrame:CGRectMake(10, 0, 45, 45)];
+    [leftbb setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    leftbb.tag = 100;
+    [leftbb addTarget:self action:@selector(actionTwo:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton * rightbb =[[UIButton alloc] initWithFrame:CGRectMake(WWWWW - 55, 0, 45, 45)];
+    [rightbb setImage:[UIImage imageNamed:@"sandian"] forState:UIControlStateNormal];
+    rightbb.tag = 101;
+    [rightbb addTarget:self action:@selector(actionTwo:) forControlEvents:UIControlEventTouchUpInside];
+    [self.backV addSubview:leftbb];
+     [self.backV addSubview:rightbb];
+    
+    
 }
 
 -(void)doSwipe:(UISwipeGestureRecognizer *)sender{
@@ -296,7 +347,76 @@
     }];
 }
 
+- (void)actionTwo:(UIButton *)button {
+    if (button.tag == 100) {
+        if([self.webView canGoBack]) {
+            [self.webView goBack];
+        }
+    }else {
+        if (self.showView.isShow){
+            [self.showView diss];
+        }else {
+            
+            [self.view addSubview:self.showView];
+            [self.showView show];
+        }
+        
+        
+    }
+}
 
 
+#pragma mark ---- 点击弹框----
+- (void)didClickIndex:(NSInteger)index {
+    if (index == 0) {
+ 
+        [self cleanCacheAndCookie];
+        
+    }else if (index == 1){
+        __weak typeof(self) weakSelf = self;
+        zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
+        vc.sendStrBlock = ^(NSString *str) {
+            
+            [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+        };
+        [weakSelf presentViewController:vc animated:YES completion:nil];
+        
+    }else if (index == 2){
+        //关于我们
+        
+    }else if (index == 3){
+        //分享
+        [self shareWithSetPreDefinePlatforms:nil withArr:nil];
+        
+    }else if (index == 4){
+        [self.webView reload];
+    }else if (index == 5){
+        [[UIApplication sharedApplication] performSelector:@selector(suspend)];
+        
+    }
+    
+    
+}
+
+
+
+
+
+
+/**清除缓存和cookie*/
+- (void)cleanCacheAndCookie{
+    //清除cookies
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]){
+        [storage deleteCookie:cookie];
+    }
+    //清除UIWebView的缓存
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    NSURLCache * cache = [NSURLCache sharedURLCache];
+    [cache removeAllCachedResponses];
+    [cache setDiskCapacity:0];
+    [cache setMemoryCapacity:0];
+}
 
 @end

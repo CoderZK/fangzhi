@@ -10,4 +10,5 @@
 
 @interface zkYanPiaoVC : UIViewController
 @property(nonatomic,copy)void(^sendStrBlock )(NSString * str);
+
 @end

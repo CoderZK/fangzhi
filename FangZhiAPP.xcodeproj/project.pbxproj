@@ -18,6 +18,7 @@
 		583041DF22B7348300B4BE42 /* UIView+KKEB.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041DE22B7348300B4BE42 /* UIView+KKEB.m */; };
 		583041E222B7384400B4BE42 /* zkYanPiaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041E122B7384400B4BE42 /* zkYanPiaoVC.m */; };
 		666C94C922B930CF00296120 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */; };
+		666C94CC22BA664200296120 /* zkShowVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C94CB22BA664200296120 /* zkShowVIew.m */; };
 		8ECE66DE6BD4CFB979349AEC /* libPods-FangZhiAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		583041E122B7384400B4BE42 /* zkYanPiaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkYanPiaoVC.m; sourceTree = "<group>"; };
 		666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		666C94C822B930CF00296120 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
+		666C94CA22BA664200296120 /* zkShowVIew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zkShowVIew.h; sourceTree = "<group>"; };
+		666C94CB22BA664200296120 /* zkShowVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zkShowVIew.m; sourceTree = "<group>"; };
 		92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FangZhiAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F26A2A6126F8EDBB7A89D9 /* Pods-FangZhiAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FangZhiAPP.debug.xcconfig"; path = "Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		A9C1943427FC5D27897B5847 /* Pods-FangZhiAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FangZhiAPP.release.xcconfig"; path = "Target Support Files/Pods-FangZhiAPP/Pods-FangZhiAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				583041AC22B733AD00B4BE42 /* AppDelegate.m */,
 				583041AE22B733AD00B4BE42 /* ViewController.h */,
 				583041AF22B733AD00B4BE42 /* ViewController.m */,
+				666C94CA22BA664200296120 /* zkShowVIew.h */,
+				666C94CB22BA664200296120 /* zkShowVIew.m */,
 				583041B122B733AD00B4BE42 /* Main.storyboard */,
 				583041B422B733AF00B4BE42 /* Assets.xcassets */,
 				583041B622B733AF00B4BE42 /* LaunchScreen.storyboard */,
@@ -356,6 +361,7 @@
 			files = (
 				583041E222B7384400B4BE42 /* zkYanPiaoVC.m in Sources */,
 				583041B022B733AD00B4BE42 /* ViewController.m in Sources */,
+				666C94CC22BA664200296120 /* zkShowVIew.m in Sources */,
 				583041DF22B7348300B4BE42 /* UIView+KKEB.m in Sources */,
 				583041BB22B733AF00B4BE42 /* main.m in Sources */,
 				583041AD22B733AD00B4BE42 /* AppDelegate.m in Sources */,
