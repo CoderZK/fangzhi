@@ -25,8 +25,17 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>UMengUShare.xcscheme_^#shared#^_</key>
+		<key>SVProgressHUD.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>UMengUShare.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>

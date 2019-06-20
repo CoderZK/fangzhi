@@ -8,4 +8,5 @@ target 'FangZhiAPP' do
  pod 'UMengUShare/Social/Sina'
  pod 'UMengUShare/Social/WeChat'
  pod 'UMengUShare/Social/QQ'
+ pod "SVProgressHUD"
 end

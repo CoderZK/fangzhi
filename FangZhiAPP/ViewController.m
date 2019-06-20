@@ -16,7 +16,7 @@
 #import <UShareUI/UShareUI.h>
 #import "zkShowVIew.h"
 #import <MJRefresh.h>
-
+#import <SVProgressHUD.h>
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
 #define WWWWW [UIScreen mainScreen].bounds.size.width
@@ -50,13 +50,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
+    [SVProgressHUD setDefaultStyle:(SVProgressHUDStyleCustom)];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
+    [SVProgressHUD setMaximumDismissTimeInterval:2.0];
+    
     UIWebView * web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH-45)];
     if (SSSSBarH > 20) {
         web.mj_h = HHHHHH - 45 - 34;
     }
     [self.view addSubview: web];
     self.webView = web;
-    self.view.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
+    self.view.backgroundColor = [UIColor whiteColor];
     web.delegate = self;
     web.backgroundColor = [UIColor whiteColor];
     
@@ -64,8 +70,7 @@
     NSString *device = [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] identifierForVendor]];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imei=%@",URLURL,device]]]];
     web.scrollView.bounces = NO;
-    
-    web.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
+
     //    web.backgroundColor =[UIColor redColor];
     
 //    self.backV = [[UIView alloc] initWithFrame:CGRectMake(WWWWW - 60 - 10, HHHHHH  - 15 - 60 - 49 - 120 , 60, 180)];
@@ -360,8 +365,12 @@
         __weak typeof(self) weakSelf = self;
         zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
         vc.sendStrBlock = ^(NSString *str) {
-            
-            [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+            if ([str hasPrefix:@"http"]) {
+                 [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+            }else {
+                [SVProgressHUD showErrorWithStatus:@"不是一个网页"];
+            }
+           
         };
         [weakSelf presentViewController:vc animated:YES completion:nil];
         
