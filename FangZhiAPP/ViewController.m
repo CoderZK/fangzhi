@@ -21,15 +21,7 @@
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
 #define WWWWW [UIScreen mainScreen].bounds.size.width
 #define  URLURL @"http://www.movida-italy.com/app/index.asp"
-
-
-<<<<<<< HEAD
-
-
-@interface ViewController ()<UIWebViewDelegate>
-=======
 @interface ViewController ()<UIWebViewDelegate,zkShowVIewDelegate>
->>>>>>> a4f080df187ed3a84a5de7653f5ab1556695880a
 @property (nonatomic,weak) JSContext * context;
 @property(nonatomic,strong)UIButton *settingBt;
 @property(nonatomic,strong)UIView *backV;
@@ -57,19 +49,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-<<<<<<< HEAD
-    //手机系统版本：9.1
-
-    UIWebView * web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH)];
-=======
-  
-    
+ 
     UIWebView * web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WWWWW, HHHHHH-45)];
     if (SSSSBarH > 20) {
         web.mj_h = HHHHHH - 45 - 34;
     }
->>>>>>> a4f080df187ed3a84a5de7653f5ab1556695880a
     [self.view addSubview: web];
     self.webView = web;
     self.view.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
