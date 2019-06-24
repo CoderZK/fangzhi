@@ -12,7 +12,7 @@
 #import "UMessage.h"
 #import "ViewController.h"
 
-#define UMKey @"5ce3d9d50cafb213130006e0"
+#define UMKey @"5d0c48590cafb2fb2b000ca6"
 //友盟安全密钥//quvss8rcpv3jahqyajgeuspa6o1vdeqr
 #define SinaAppKey @"102135063"
 #define SinaAppSecret @"47a31952aed883dc13cdccaf9b30df0d"

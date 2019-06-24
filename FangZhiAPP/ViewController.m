@@ -376,7 +376,7 @@
         
     }else if (index == 2){
         //关于我们
-        
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/about.asp"]]];
     }else if (index == 3){
         //分享
         [self shareWithSetPreDefinePlatforms:nil withArr:nil];
