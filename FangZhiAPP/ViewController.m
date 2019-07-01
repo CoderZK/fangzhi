@@ -21,6 +21,7 @@
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
 #define WWWWW [UIScreen mainScreen].bounds.size.width
 #define  URLURL @"http://www.movida-italy.com/app/index.asp"
+//#define  URLURL [@"http://www.movida-italy.com/app/index.asp" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
 @interface ViewController ()<UIWebViewDelegate,zkShowVIewDelegate>
 @property (nonatomic,weak) JSContext * context;
 @property(nonatomic,strong)UIButton *settingBt;
@@ -47,6 +48,8 @@
     return _showView;
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
  
@@ -67,8 +70,13 @@
     web.backgroundColor = [UIColor whiteColor];
     
     //设备ID
+//    NSString *device = [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] identifierForVendor]];
+//    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imei=%@",URLURL,device]]]];
+    
     NSString *device = [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] identifierForVendor]];
-    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imei=%@",URLURL,device]]]];
+    
+    NSString *encodedString=[[NSString stringWithFormat:@"%@?imei=%@",URLURL,device] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedString]]];
     web.scrollView.bounces = NO;
 
     //    web.backgroundColor =[UIColor redColor];
@@ -235,6 +243,17 @@
     if (error) {
         NSLog(@"\nerror === %@",error.description);
     }
+    
+    UIAlertController * avc = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%ld",(long)error.code] message:error.description preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [avc addAction:action];
+    
+    [self presentViewController:avc animated:YES completion:nil];
+    
 }
 
 - (void)getMessage:(NSString *)str {
@@ -376,14 +395,22 @@
         
     }else if (index == 2){
         //关于我们
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/about.asp"]]];
+        NSString * str = @"http://www.movida-italy.com/app/about.asp";
+
+        NSString *encodedString=[[NSString stringWithFormat:@"%@",str] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedString]]];
+
     }else if (index == 3){
         //分享
         [self shareWithSetPreDefinePlatforms:nil withArr:nil];
         
     }else if (index == 4){
+
         [self.webView reload];
     }else if (index == 5){
+        
+  
         [[UIApplication sharedApplication] performSelector:@selector(suspend)];
         
     }
