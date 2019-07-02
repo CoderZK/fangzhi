@@ -70,11 +70,13 @@
     web.backgroundColor = [UIColor whiteColor];
     
     //设备ID
-//    NSString *device = [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] identifierForVendor]];
-//    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?imei=%@",URLURL,device]]]];
     
-    NSString *device = [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] identifierForVendor]];
     
+  
+
+    
+    
+    NSString *device = [NSString stringWithFormat:@"%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
     NSString *encodedString=[[NSString stringWithFormat:@"%@?imei=%@",URLURL,device] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedString]]];
     web.scrollView.bounces = NO;
@@ -403,8 +405,11 @@
 
     }else if (index == 3){
         //分享
-        [self shareWithSetPreDefinePlatforms:nil withArr:nil];
-        
+//        [self shareWithSetPreDefinePlatforms:nil withArr:nil];
+
+//        NSArray * arr =@[];
+//        NSLog(@"%@",arr[1]);
+
     }else if (index == 4){
 
         [self.webView reload];

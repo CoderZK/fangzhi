@@ -2,6 +2,12 @@ PODS:
   - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
   - SVProgressHUD (2.2.5)
+  - UMCAnalytics (6.0.3):
+    - UMCCommon
+  - UMCCommon (2.0.1)
+  - UMCErrorCatch (1.0.0):
+    - UMCCommon
+  - UMCSecurityPlugins (1.0.6)
   - UMengUShare/Core (6.4.8.2):
     - UMengUShare/Network
   - UMengUShare/Network (6.4.8.2)
@@ -27,6 +33,10 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - SVProgressHUD
+  - UMCAnalytics
+  - UMCCommon
+  - UMCErrorCatch
+  - UMCSecurityPlugins
   - UMengUShare/Social/QQ
   - UMengUShare/Social/Sina
   - UMengUShare/Social/WeChat
@@ -37,14 +47,22 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - SVProgressHUD
+    - UMCAnalytics
+    - UMCCommon
+    - UMCErrorCatch
+    - UMCSecurityPlugins
     - UMengUShare
 
 SPEC CHECKSUMS:
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UMCAnalytics: ff58714ada407682c4a07548156f94bcec92f055
+  UMCCommon: 0263a057a2e1ae1da4c8308541e56904a493ce13
+  UMCErrorCatch: 51f1b68f920233e90a3fa6d51f0456174507ec78
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
 
-PODFILE CHECKSUM: b176b5310b1512168ebf88ce84bec3353076e262
+PODFILE CHECKSUM: 0a3def796397d5be77db4f3f8a93844788bf8f2e
 
 COCOAPODS: 1.7.0

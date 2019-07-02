@@ -9,8 +9,12 @@
 #import "AppDelegate.h"
 #import <AdSupport/AdSupport.h>
 #import <UShareUI/UShareUI.h>
+#import <UMCommon/UMCommon.h>
 #import "UMessage.h"
 #import "ViewController.h"
+#import <UMErrorCatch/UMErrorCatch.h>
+#import "Crash.h"
+#import "FangZhiCrachVC.h"
 
 #define UMKey @"5d0c48590cafb2fb2b000ca6"
 //友盟安全密钥//quvss8rcpv3jahqyajgeuspa6o1vdeqr
@@ -48,8 +52,30 @@
     
     [[UMSocialManager defaultManager] setUmSocialAppkey:UMKey];
     
+   
+    
     [self configUSharePlatforms];
     
+    
+    //注册消息处理函数的处理方法
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    // 发送崩溃日志
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    
+    NSString *dataPath = [path stringByAppendingPathComponent:@"error.log"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:dataPath];
+    
+    NSString *content=[NSString stringWithContentsOfFile:dataPath encoding:NSUTF8StringEncoding error:nil];
+    
+    NSLog(@"\n\n\n---%@",content);
+
+    
+    if (data != nil) {
+       
+        [self.window.rootViewController presentViewController:[[FangZhiCrachVC alloc] init] animated:YES completion:nil];
+        
+    }
     
     return YES;
 }
