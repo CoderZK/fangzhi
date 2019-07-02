@@ -1,6 +1,8 @@
 PODS:
   - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
+  - QRCodeReaderViewController (3.5.2)
+  - SGQRCode (3.0.1)
   - SVProgressHUD (2.2.5)
   - UMCAnalytics (6.0.3):
     - UMCCommon
@@ -32,6 +34,8 @@ PODS:
 DEPENDENCIES:
   - MJExtension
   - MJRefresh
+  - QRCodeReaderViewController (from `https://github.com/zhengjinghua/MQRCodeReaderViewController.git`)
+  - SGQRCode (~> 3.0.1)
   - SVProgressHUD
   - UMCAnalytics
   - UMCCommon
@@ -46,6 +50,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MJExtension
     - MJRefresh
+    - SGQRCode
     - SVProgressHUD
     - UMCAnalytics
     - UMCCommon
@@ -53,9 +58,20 @@ SPEC REPOS:
     - UMCSecurityPlugins
     - UMengUShare
 
+EXTERNAL SOURCES:
+  QRCodeReaderViewController:
+    :git: https://github.com/zhengjinghua/MQRCodeReaderViewController.git
+
+CHECKOUT OPTIONS:
+  QRCodeReaderViewController:
+    :commit: 6370cd1cd7b8f312df7d1b8ca912c05ff19498f1
+    :git: https://github.com/zhengjinghua/MQRCodeReaderViewController.git
+
 SPEC CHECKSUMS:
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  QRCodeReaderViewController: 557e3291d8fe8adf20d62b7f6bd79a3941f8ec31
+  SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UMCAnalytics: ff58714ada407682c4a07548156f94bcec92f055
   UMCCommon: 0263a057a2e1ae1da4c8308541e56904a493ce13
@@ -63,6 +79,6 @@ SPEC CHECKSUMS:
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
 
-PODFILE CHECKSUM: 0a3def796397d5be77db4f3f8a93844788bf8f2e
+PODFILE CHECKSUM: 77807ffc34416824cc1e99818d73b03994a84aba
 
 COCOAPODS: 1.7.0

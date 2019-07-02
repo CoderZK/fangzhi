@@ -53,7 +53,7 @@
 - (void)addViews {
     
     CGFloat ww = 80;
-    CGFloat space = (WWWWW - 240)/5;
+    CGFloat space = (WWWWW - 240)/6;
     
     NSArray * arr =@[@"清缓存",@"扫一扫",@"关于",@"分享",@"刷新",@"退出"];
     for (int i = 0 ; i < arr.count ; i++) {

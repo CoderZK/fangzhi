@@ -18,7 +18,9 @@
 #define kImageMaxSize   CGSizeMake(1000, 1000)
 
 @interface zkYanPiaoVC ()<AVCaptureMetadataOutputObjectsDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
-
+{
+    BOOL bHadAutoVideoZoom;
+}
 //会话和图层需要声明成属性，因为代理方法中需要使用
 @property (nonatomic, weak) AVCaptureSession *session;
 /** 显示的预览图层 */
@@ -37,6 +39,17 @@
 @property (nonatomic , strong)NSString * dingDanID;
 /*数据数组*/
 @property (nonatomic , strong)NSMutableArray * dataArray;
+
+@property (nonatomic,strong)AVCaptureDevice* device;
+
+
+
+@property (strong, nonatomic) AVCaptureDeviceInput * input;
+@property (nonatomic, strong) UIView *videoPreView; ///视频预览显示视图
+@property (nonatomic, assign) CGPoint centerPoint;//二维码的中心点
+@property (nonatomic, assign) BOOL isAutoOpen;//默认NO 闪光灯
+
+@property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;//拍照
 
 @end
 
@@ -143,7 +156,8 @@
     });
     
     
-    
+//    //对焦手势,方法在下面
+//    [self addGenstureRecognizer];
     
     
     // 1.创建捕捉会话
@@ -152,6 +166,8 @@
     // 2.添加输入设备
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
+    self.input = input;
+    self.device = device;
     if (![self.session canAddInput:input]) {
         return;
     }
@@ -163,6 +179,19 @@
         return;
     }
     [session addOutput:output];
+    
+    
+    self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey,nil];
+    [self.stillImageOutput setOutputSettings:outputSettings];
+    
+    if ([session canAddOutput:self.stillImageOutput]){
+        [session addOutput:self.stillImageOutput];
+    }
+
+    
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(subjectAreaDidChange:) name:AVCaptureDeviceSubjectAreaDidChangeNotification object:device];
+    
     //设置扫描敏感区域，frame为想要扫描的敏感区域
     output.rectOfInterest =[self rectOfInterestByScanViewRect:self.imageView.frame];
     // 3.1.设置输入元数据的类型(类型是二维码数据和条形码)
@@ -172,7 +201,12 @@
     AVCaptureVideoPreviewLayer *layer = [AVCaptureVideoPreviewLayer layerWithSession:session];
     layer.frame = self.view.bounds;
     layer.backgroundColor = [UIColor redColor].CGColor;
-    [self.view.layer addSublayer:layer];
+//    [self.view.layer addSublayer:layer];
+    
+    [self.view insertSubview:self.videoPreView atIndex:0];
+    [self.videoPreView.layer insertSublayer:layer atIndex:0];
+
+    
     
     UIView * topView =[[UIView alloc] initWithFrame:CGRectMake(0, 0,ScreenW ,CGRectGetMinY(self.imageView.frame))];
     topView.backgroundColor =[UIColor colorWithWhite:0 alpha:0.3];
@@ -228,12 +262,162 @@
     self.layer = layer;
     
     
+     [input.device lockForConfiguration:nil];
+    //自动平衡
+    if ([self.device isWhiteBalanceModeSupported:(AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance)]) {
+        [input.device setWhiteBalanceMode:(AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance)];
+    }
+    //自动曝光
+    if ([self.device isExposureModeSupported:(AVCaptureExposureModeContinuousAutoExposure)]) {
+        [input.device setExposureMode:(AVCaptureExposureModeContinuousAutoExposure)];
+    }
+    
+    if(self.device.isFocusPointOfInterestSupported && [self.device isFocusModeSupported:(AVCaptureFocusModeContinuousAutoFocus)]) {
+        [input.device setFocusMode:(AVCaptureFocusModeContinuousAutoFocus)];
+    }
+    
+    
     // 5.开始扫描
     [session startRunning];
     
-    
+    bHadAutoVideoZoom = NO;//还未自动拉近的值
+    [self setVideoScale:1 ];//设置拉近倍数为1
     
 }
+
+
+#pragma mark - get
+- (UIView *)videoPreView{
+    if (!_videoPreView) {
+        UIView *videoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, ScreenH)];
+        videoView.backgroundColor = [UIColor clearColor];
+        _videoPreView = videoView;
+    }
+    return _videoPreView;
+}
+
+- (void)setVideoScale:(CGFloat)scale
+{
+    [self.input.device lockForConfiguration:nil];
+    
+    AVCaptureConnection *videoConnection = [self connectionWithMediaType:AVMediaTypeVideo fromConnections:[[self stillImageOutput] connections]];
+    CGFloat maxScaleAndCropFactor = ([[self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo] videoMaxScaleAndCropFactor])/16;
+    
+    if (scale > maxScaleAndCropFactor){
+        scale = maxScaleAndCropFactor;
+    }else if (scale < 1){
+        scale = 1;
+    }
+    
+    CGFloat zoom = scale / videoConnection.videoScaleAndCropFactor;
+    videoConnection.videoScaleAndCropFactor = scale;
+    
+    [self.input.device unlockForConfiguration];
+    
+    CGAffineTransform transform = self.videoPreView.transform;
+    
+    //自动拉近放大
+    if (scale == 1) {
+        self.videoPreView.transform = CGAffineTransformScale(transform, zoom, zoom);
+        CGRect rect = self.videoPreView.frame;
+        rect.origin = CGPointZero;
+        self.videoPreView.frame = rect;
+    } else {
+        CGFloat x = self.videoPreView.center.x - self.centerPoint.x;
+        CGFloat y = self.videoPreView.center.y - self.centerPoint.y;
+        CGRect rect = self.videoPreView.frame;
+        rect.origin.x = rect.size.width / 2.0 * (1 - scale);
+        rect.origin.y = rect.size.height / 2.0 * (1 - scale);
+        rect.origin.x += x * zoom;
+        rect.origin.y += y * zoom;
+        rect.size.width = rect.size.width * scale;
+        rect.size.height = rect.size.height * scale;
+        
+        [UIView animateWithDuration:.5f animations:^{
+            self.videoPreView.transform = CGAffineTransformScale(transform, zoom, zoom);
+            self.videoPreView.frame = rect;
+        } completion:^(BOOL finished) {
+        }];
+    }
+    
+    NSLog(@"放大%f",zoom);
+}
+
+
+- (AVCaptureConnection *)connectionWithMediaType:(NSString *)mediaType fromConnections:(NSArray *)connections
+{
+    for ( AVCaptureConnection *connection in connections ) {
+        for ( AVCaptureInputPort *port in [connection inputPorts] ) {
+            if ( [[port mediaType] isEqual:mediaType] ) {
+                return connection;
+            }
+        }
+    }
+    return nil;
+}
+
+
+////手动对焦
+//-(void)addGenstureRecognizer{
+//    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapScreen:)];
+//    [self.imageView addGestureRecognizer:tapGesture];
+//}
+//- (void)tapScreen:(UITapGestureRecognizer*)gesture{
+//    CGPoint point = [gesture locationInView:gesture.view];
+//    [self focusAtPoint:point];
+//}
+//
+//- (void)focusAtPoint:(CGPoint)point{
+//    CGSize size = self.view.bounds.size;
+//    CGPoint focusPoint = CGPointMake( point.y /size.height ,1-point.x/size.width );
+//    NSError *error;
+//    if ([self.device lockForConfiguration:&error]) {
+//        if ([self.device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
+//            [self.device setFocusPointOfInterest:focusPoint];
+//            [self.device setFocusMode:AVCaptureFocusModeAutoFocus];
+//        }
+//        [self.device unlockForConfiguration];
+//    }
+//    [self setFocusCursorWithPoint:point];
+//}
+//
+//
+////自动对焦
+//- (void)subjectAreaDidChange:(NSNotification *)notification
+//{
+//    //先进行判断是否支持控制对焦
+//    if (_device.isFocusPointOfInterestSupported &&[_device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
+//        NSError *error =nil;
+//        //对cameraDevice进行操作前，需要先锁定，防止其他线程访问，
+//        [_device lockForConfiguration:&error];
+//        [_device setFocusMode:AVCaptureFocusModeAutoFocus];
+//        [self focusAtPoint:_imageView.center];
+//        //操作完成后，记得进行unlock。
+//        [_device unlockForConfiguration];
+//    }
+//}
+//
+//-(void)setFocusCursorWithPoint:(CGPoint)point{
+//    //下面是手触碰屏幕后对焦的效果
+//    _imageView.center = point;
+//    _imageView.hidden = NO;
+//
+//    [UIView animateWithDuration:0.3 animations:^{
+//        _imageView.transform = CGAffineTransformMakeScale(1.25, 1.25);
+//    }completion:^(BOOL finished) {
+//        [UIView animateWithDuration:0.5 animations:^{
+//            _imageView.transform = CGAffineTransformIdentity;
+//        } completion:^(BOOL finished) {
+//
+//
+//        }];
+//    }];
+//
+//}
+
+
+
+
 
 -(void)cancel {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -310,10 +494,16 @@
         //只要扫描到数据就会调用的
         self.customLabel.text = object.stringValue;
         
-        if (self.sendStrBlock != nil) {
-            self.sendStrBlock(object.stringValue);
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.sendStrBlock != nil) {
+                self.sendStrBlock(object.stringValue);
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        });
+
+        
+        
         
         
         //        if ([object.stringValue hasPrefix:@"FM-"]) {

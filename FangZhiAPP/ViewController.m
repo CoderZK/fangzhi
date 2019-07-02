@@ -225,16 +225,18 @@
     };
     __weak typeof(self) weakSelf = self;
     _context[@"js2java"] = ^() {
-        
-        zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
-        vc.sendStrBlock = ^(NSString *str) {
+    
+        dispatch_async(dispatch_get_main_queue(), ^{
             
-           [weakSelf.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alertMessage('%@')",str]];
-            
-        };
-        [weakSelf presentViewController:vc animated:YES completion:nil];
+            zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
+            vc.sendStrBlock = ^(NSString *str) {
+                
+                [weakSelf.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alertMessage('%@')",str]];
+                
+            };
+            [weakSelf presentViewController:vc animated:YES completion:nil];
+        });
 
-        
     };
     
 
@@ -383,18 +385,19 @@
         [self cleanCacheAndCookie];
         
     }else if (index == 1){
-        __weak typeof(self) weakSelf = self;
-        zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
-        vc.sendStrBlock = ^(NSString *str) {
-            if ([str hasPrefix:@"http"]) {
-                 [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
-            }else {
-                [SVProgressHUD showErrorWithStatus:@"不是一个网页"];
-            }
-           
-        };
-        [weakSelf presentViewController:vc animated:YES completion:nil];
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            __weak typeof(self) weakSelf = self;
+            zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
+            vc.sendStrBlock = ^(NSString *str) {
+                if ([str hasPrefix:@"http"]) {
+                    [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+                }else {
+                    [SVProgressHUD showErrorWithStatus:@"不是一个网页"];
+                }
+            };
+            [weakSelf presentViewController:vc animated:YES completion:nil];
+        });
     }else if (index == 2){
         //关于我们
         NSString * str = @"http://www.movida-italy.com/app/about.asp";

@@ -13,4 +13,6 @@ target 'FangZhiAPP' do
  pod 'UMengUShare/Social/WeChat'
  pod 'UMengUShare/Social/QQ'
  pod "SVProgressHUD"
+ pod 'SGQRCode', '~> 3.0.1'
+ pod 'QRCodeReaderViewController', :git => 'https://github.com/zhengjinghua/MQRCodeReaderViewController.git'
 end
