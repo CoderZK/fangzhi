@@ -17,6 +17,8 @@
 #import "zkShowVIew.h"
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
+#import "WBQRCodeVC.h"
+#import <AVFoundation/AVFoundation.h>
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
 #define WWWWW [UIScreen mainScreen].bounds.size.width
@@ -228,13 +230,13 @@
     
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
+            WBQRCodeVC * vc =[[WBQRCodeVC alloc] init];
             vc.sendStrBlock = ^(NSString *str) {
                 
                 [weakSelf.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alertMessage('%@')",str]];
                 
             };
-            [weakSelf presentViewController:vc animated:YES completion:nil];
+            [weakSelf.navigationController pushViewController:vc animated:YES];
         });
 
     };
@@ -385,10 +387,23 @@
         [self cleanCacheAndCookie];
         
     }else if (index == 1){
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//
+//            __weak typeof(self) weakSelf = self;
+//            zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
+//            vc.sendStrBlock = ^(NSString *str) {
+//                if ([str hasPrefix:@"http"]) {
+//                    [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+//                }else {
+//                    [SVProgressHUD showErrorWithStatus:@"不是一个网页"];
+//                }
+//            };
+//            [weakSelf presentViewController:vc animated:YES completion:nil];
+//        });
+        __weak typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            __weak typeof(self) weakSelf = self;
-            zkYanPiaoVC * vc =[[zkYanPiaoVC alloc] init];
+        
+            WBQRCodeVC *vc = [[WBQRCodeVC alloc] init];
             vc.sendStrBlock = ^(NSString *str) {
                 if ([str hasPrefix:@"http"]) {
                     [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
@@ -396,8 +411,13 @@
                     [SVProgressHUD showErrorWithStatus:@"不是一个网页"];
                 }
             };
-            [weakSelf presentViewController:vc animated:YES completion:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+            
         });
+        
+        
+        
     }else if (index == 2){
         //关于我们
         NSString * str = @"http://www.movida-italy.com/app/about.asp";
@@ -446,5 +466,59 @@
     [cache setDiskCapacity:0];
     [cache setMemoryCapacity:0];
 }
+
+- (void)QRCodeScanVC:(UIViewController *)scanVC {
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if (device) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        switch (status) {
+            case AVAuthorizationStatusNotDetermined: {
+                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                    if (granted) {
+                        dispatch_sync(dispatch_get_main_queue(), ^{
+                            [self presentViewController:scanVC animated:YES completion:nil];
+                        });
+                        NSLog(@"用户第一次同意了访问相机权限 - - %@", [NSThread currentThread]);
+                    } else {
+                        NSLog(@"用户第一次拒绝了访问相机权限 - - %@", [NSThread currentThread]);
+                    }
+                }];
+                break;
+            }
+            case AVAuthorizationStatusAuthorized: {
+                [self.navigationController pushViewController:scanVC animated:YES];
+                break;
+            }
+            case AVAuthorizationStatusDenied: {
+                UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请去-> [设置 - 隐私 - 相机 - SGQRCodeExample] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
+                UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                
+                [alertC addAction:alertA];
+                [self presentViewController:alertC animated:YES completion:nil];
+                break;
+            }
+            case AVAuthorizationStatusRestricted: {
+                NSLog(@"因为系统原因, 无法访问相册");
+                break;
+            }
+                
+            default:
+                break;
+        }
+        return;
+    }
+    
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"未检测到您的摄像头" preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alertC addAction:alertA];
+    [self presentViewController:alertC animated:YES completion:nil];
+}
+
+
 
 @end
