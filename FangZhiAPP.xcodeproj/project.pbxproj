@@ -19,6 +19,8 @@
 		583041E222B7384400B4BE42 /* zkYanPiaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 583041E122B7384400B4BE42 /* zkYanPiaoVC.m */; };
 		5834B4D822CA13DB0044BB95 /* FangZhiCrachVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5834B4D622CA13DB0044BB95 /* FangZhiCrachVC.m */; };
 		5834B4D922CA13DB0044BB95 /* FangZhiCrachVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5834B4D722CA13DB0044BB95 /* FangZhiCrachVC.xib */; };
+		5836EB9822CCAB5D00EE6611 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5836EB9722CCAB5D00EE6611 /* Security.framework */; };
+		5836EBA322CCAF7D00EE6611 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5836EBA222CCAF7C00EE6611 /* UICKeyChainStore.m */; };
 		58375BDA22CB5ED800BA16E1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 58375BD522CB5ED800BA16E1 /* MBProgressHUD.m */; };
 		58375BDB22CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 58375BD822CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.m */; };
 		58375BDC22CB5ED800BA16E1 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58375BD922CB5ED800BA16E1 /* MBProgressHUD.bundle */; };
@@ -70,6 +72,9 @@
 		5834B4D522CA13DB0044BB95 /* FangZhiCrachVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FangZhiCrachVC.h; sourceTree = "<group>"; };
 		5834B4D622CA13DB0044BB95 /* FangZhiCrachVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FangZhiCrachVC.m; sourceTree = "<group>"; };
 		5834B4D722CA13DB0044BB95 /* FangZhiCrachVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FangZhiCrachVC.xib; sourceTree = "<group>"; };
+		5836EB9722CCAB5D00EE6611 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5836EBA122CCAF7C00EE6611 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		5836EBA222CCAF7C00EE6611 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
 		58375BD522CB5ED800BA16E1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		58375BD622CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+SGQRCode.h"; sourceTree = "<group>"; };
 		58375BD722CB5ED800BA16E1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5836EB9822CCAB5D00EE6611 /* Security.framework in Frameworks */,
 				8ECE66DE6BD4CFB979349AEC /* libPods-FangZhiAPP.a in Frameworks */,
 				666C94C922B930CF00296120 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 			);
@@ -118,6 +124,7 @@
 		174E18060AEF53FEA2F31498 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5836EB9722CCAB5D00EE6611 /* Security.framework */,
 				92CEE2B1FFF828E126DCDC1E /* libPods-FangZhiAPP.a */,
 			);
 			name = Frameworks;
@@ -148,6 +155,7 @@
 		583041AA22B733AD00B4BE42 /* FangZhiAPP */ = {
 			isa = PBXGroup;
 			children = (
+				5836EBA022CCAF7200EE6611 /* miyue */,
 				58375BD322CB5ED800BA16E1 /* ThirdParty */,
 				666C94C622B930CF00296120 /* UMessage_Sdk_1.3.0 */,
 				583041E022B7384400B4BE42 /* zkYanPiaoVC.h */,
@@ -192,6 +200,15 @@
 				583041D122B733AF00B4BE42 /* Info.plist */,
 			);
 			path = FangZhiAPPUITests;
+			sourceTree = "<group>";
+		};
+		5836EBA022CCAF7200EE6611 /* miyue */ = {
+			isa = PBXGroup;
+			children = (
+				5836EBA122CCAF7C00EE6611 /* UICKeyChainStore.h */,
+				5836EBA222CCAF7C00EE6611 /* UICKeyChainStore.m */,
+			);
+			path = miyue;
 			sourceTree = "<group>";
 		};
 		58375BD322CB5ED800BA16E1 /* ThirdParty */ = {
@@ -419,6 +436,7 @@
 				5850BDB322CA06450027A357 /* Crash.m in Sources */,
 				583041AD22B733AD00B4BE42 /* AppDelegate.m in Sources */,
 				58375BDB22CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.m in Sources */,
+				5836EBA322CCAF7D00EE6611 /* UICKeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4BV757895B;
+				DEVELOPMENT_TEAM = 73D5T6D5VH;
 				INFOPLIST_FILE = FangZhiAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zk.FangZhiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = ComDev;
+				PROVISIONING_PROFILE_SPECIFIER = fangzhidev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;

@@ -19,10 +19,16 @@
 #import <SVProgressHUD.h>
 #import "WBQRCodeVC.h"
 #import <AVFoundation/AVFoundation.h>
+#import "UICKeyChainStore.h"
+
+
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
 #define WWWWW [UIScreen mainScreen].bounds.size.width
 #define  URLURL @"http://www.movida-italy.com/app/index.asp"
+
+
+
 //#define  URLURL [@"http://www.movida-italy.com/app/index.asp" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
 @interface ViewController ()<UIWebViewDelegate,zkShowVIewDelegate>
 @property (nonatomic,weak) JSContext * context;
@@ -55,6 +61,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
+    
+    
+    
+    
     [SVProgressHUD setDefaultStyle:(SVProgressHUDStyleCustom)];
     [SVProgressHUD setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.7]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
@@ -73,12 +83,16 @@
     
     //设备ID
     
+    NSString * dddddddd = [NSString stringWithFormat:@"%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
     
-  
+    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+    NSString *device  = [keychainStore stringForKey:@"FangZhipasswordabc"];
 
-    
-    
-    NSString *device = [NSString stringWithFormat:@"%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+    if (device.length == 0) {
+      device = [NSString stringWithFormat:@"%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+      BOOL isOK  = [keychainStore setString:[NSString stringWithFormat:@"%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]] forKey:@"FangZhipasswordabc"];
+    }
+
     NSString *encodedString=[[NSString stringWithFormat:@"%@?imei=%@",URLURL,device] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedString]]];
     web.scrollView.bounces = NO;
