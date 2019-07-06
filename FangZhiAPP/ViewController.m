@@ -479,6 +479,7 @@
     [cache removeAllCachedResponses];
     [cache setDiskCapacity:0];
     [cache setMemoryCapacity:0];
+
 }
 
 - (void)QRCodeScanVC:(UIViewController *)scanVC {

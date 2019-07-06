@@ -114,7 +114,7 @@
             
             if (weakSelf.sendStrBlock != nil) {
                 weakSelf.sendStrBlock(result);
-                [weakSelf dismissViewControllerAnimated:YES completion:nil];
+                [weakSelf.navigationController popViewControllerAnimated:YES];
             }
           
 
