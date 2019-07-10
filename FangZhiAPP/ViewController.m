@@ -264,7 +264,11 @@
         NSLog(@"\nerror === %@",error.description);
     }
     
-    UIAlertController * avc = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%ld",(long)error.code] message:error.description preferredStyle:(UIAlertControllerStyleAlert)];
+    if (error.code == NSURLErrorCancelled || error.code == NSURLErrorNetworkConnectionLost) {
+        return;
+    }
+    
+    UIAlertController * avc = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"errorCode == %ld",(long)error.code] message:error.description preferredStyle:(UIAlertControllerStyleAlert)];
     
     UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
         
