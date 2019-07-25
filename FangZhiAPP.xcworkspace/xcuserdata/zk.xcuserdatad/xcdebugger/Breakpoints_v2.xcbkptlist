@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.229736"
+            timestampString = "585220905.2633131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "500"
-            endingLineNumber = "500"
+            startingLineNumber = "505"
+            endingLineNumber = "505"
             landmarkName = "-QRCodeScanVC:"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,7 +36,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.230265"
+            timestampString = "585220905.263397"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "503"
+            endingLineNumber = "503"
+            landmarkName = "-QRCodeScanVC:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FangZhiAPP/ViewController.m"
+            timestampString = "585220905.263451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "498"
@@ -52,27 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.230695"
+            timestampString = "585220905.263502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493"
-            landmarkName = "-QRCodeScanVC:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.2310899"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "495"
-            endingLineNumber = "495"
+            startingLineNumber = "500"
+            endingLineNumber = "500"
             landmarkName = "-QRCodeScanVC:"
             landmarkType = "7">
             <Locations>
@@ -84,11 +84,11 @@
                   moduleName = "FangZhiAPP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zk/Documents/others/fangzhi/FangZhiAPP/ViewController.m"
-                  timestampString = "584344370.539744"
+                  timestampString = "585220971.09198"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "491"
-                  endingLineNumber = "491"
+                  startingLineNumber = "500"
+                  endingLineNumber = "500"
                   offsetFromSymbolStart = "248">
                </Location>
                <Location
@@ -99,11 +99,11 @@
                   moduleName = "FangZhiAPP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zk/Documents/others/fangzhi/FangZhiAPP/ViewController.m"
-                  timestampString = "584344370.541751"
+                  timestampString = "585220971.0936691"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "492"
-                  endingLineNumber = "492"
+                  startingLineNumber = "501"
+                  endingLineNumber = "501"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.231407"
+            timestampString = "585220905.26355"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
+            startingLineNumber = "501"
+            endingLineNumber = "501"
             landmarkName = "-QRCodeScanVC:"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.2319061"
+            timestampString = "585220905.263599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "-webView:didFailLoadWithError:"
             landmarkType = "7">
          </BreakpointContent>
@@ -148,28 +148,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.232227"
+            timestampString = "585220905.263647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
-            landmarkName = "-webView:didFailLoadWithError:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FangZhiAPP/ViewController.m"
-            timestampString = "584345119.232502"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "-webViewDidFinishLoad:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FangZhiAPP/ViewController.m"
+            timestampString = "585220969.667784"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "-webViewDidStartLoad:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -221,10 +221,13 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     NSLog(@"开始加载网页");
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];//清除web 的缓存
     //    [SVProgressHUD show];
 }
-//JS 调用OC 方法并且传参,要你管啊 你想也不想啊 干啥的额
 
+
+
+//JS 调用OC 方法并且传参,要你管啊 你想也不想啊 干啥的额
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
     NSURL *url = webView.request.URL;
@@ -320,6 +323,8 @@
     
     
 }
+
+
 
 
 //分享
