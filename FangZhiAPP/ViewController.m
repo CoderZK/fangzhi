@@ -221,6 +221,14 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     NSLog(@"开始加载网页");
+    
+    NSURLRequest * request = (NSURLRequest *)webView.request;
+    NSString * str = request.URL.relativeString;
+    
+    NSLog(@"\nnnn-======%@",str);
+
+    
+    
     [[NSURLCache sharedURLCache] removeAllCachedResponses];//清除web 的缓存
     //    [SVProgressHUD show];
 }
@@ -455,10 +463,15 @@
 
 //        NSArray * arr =@[];
 //        NSLog(@"%@",arr[1]);
+        
+          [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/colorcard/borrow3.asp#"]]];
+        
 
     }else if (index == 4){
 
-        [self.webView reload];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/colorcard/borrow3.asp"]]];
+        
+//        [self.webView reload];
     }else if (index == 5){
         
   
