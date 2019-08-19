@@ -269,7 +269,6 @@
 
 }
 
-
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     if (error) {
         NSLog(@"\nerror === %@",error.description);
@@ -408,6 +407,7 @@
         
         
     }
+
 }
 
 
@@ -464,7 +464,15 @@
 //        NSArray * arr =@[];
 //        NSLog(@"%@",arr[1]);
         
-          [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/colorcard/borrow3.asp#"]]];
+//          [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/colorcard/borrow3.asp#"]]];
+        
+        [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine)]];
+        [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+           
+            [self shareWebPageToPlatformType:platformType];
+            
+        }];
+        
         
 
     }else if (index == 4){
@@ -554,6 +562,41 @@
     
     [alertC addAction:alertA];
     [self presentViewController:alertC animated:YES completion:nil];
+}
+
+
+//分享
+- (void)shareWebPageToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    
+    //创建网页内容对象
+//    NSString* thumbURL =  @"https://mobile.umeng.com/images/pic/home/social/img-1.png";
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"YARNS&COLORS" descr:@"YARNS&COLORS" thumImage:[UIImage imageNamed:@"logo"]];
+    //设置网页地址
+    shareObject.webpageUrl = self.webView.request.URL.relativeString;
+    
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+    
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            UMSocialLogInfo(@"************Share fail with error %@*********",error);
+        }else{
+            if ([data isKindOfClass:[UMSocialShareResponse class]]) {
+                UMSocialShareResponse *resp = data;
+                //分享结果消息
+                UMSocialLogInfo(@"response message is %@",resp.message);
+                //第三方原始返回的数据
+                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+                
+            }else{
+                UMSocialLogInfo(@"response data is %@",data);
+            }
+        }
+    }];
 }
 
 

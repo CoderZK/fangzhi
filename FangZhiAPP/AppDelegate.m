@@ -22,8 +22,8 @@
 #define SinaAppSecret @"47a31952aed883dc13cdccaf9b30df0d"
 #define QQAppID @"101504727"
 #define QQAppKey @"2e7928e5d1e2974eb06a35fa408e0950"
-#define WXAppID @"wxe68b61e47e500548"
-#define WXAppSecret @"96405f2eddb5e6cd8e6e01c87bbda8fb"
+#define WXAppID @"wx75f90eee898b84c6"
+#define WXAppSecret @"c447c6c5c62568576ebcecde57d4f4cd"
 
 @interface AppDelegate ()
 
