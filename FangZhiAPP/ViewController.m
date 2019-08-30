@@ -41,6 +41,8 @@
 @property(nonatomic , strong)UIView *backView;
 /**  */
 @property(nonatomic , assign)BOOL isShow;
+
+
 @end
 
 @implementation ViewController
@@ -96,6 +98,8 @@
     NSString *encodedString=[[NSString stringWithFormat:@"%@?imei=%@",URLURL,device] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedString]]];
     web.scrollView.bounces = NO;
+    [web sizeToFit];
+    
 
     //    web.backgroundColor =[UIColor redColor];
     
@@ -224,15 +228,42 @@
     
     NSURLRequest * request = (NSURLRequest *)webView.request;
     NSString * str = request.URL.relativeString;
-    
+
     NSLog(@"\nnnn-======%@",str);
+    
+    
+    
+    NSString * str2 = [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.innerHTML"];
+    
+    NSLog(@" \n 111111111111111111\n%@\n11111111111111111\n",str2);
 
     
+//
+//
+//    if (str.length > 0 && [[str substringWithRange:NSMakeRange(str.length - 1, 1)] isEqualToString:@"#"]) {
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[str substringWithRange:NSMakeRange(0, str.length-1)]]]];
+//    }
+//
     
-    [[NSURLCache sharedURLCache] removeAllCachedResponses];//清除web 的缓存
+    
+//    [[NSURLCache sharedURLCache] removeAllCachedResponses];//清除web 的缓存
     //    [SVProgressHUD show];
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+
+//    NSString * str = request.URL.relativeString;
+//
+//    NSLog(@"\nnnn-======-----%@",str);
+//
+//
+//    if (str.length > 0 && [[str substringWithRange:NSMakeRange(str.length - 1, 1)] isEqualToString:@"#"]) {
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[str substringWithRange:NSMakeRange(0, str.length-1)]]]];
+//
+//    }
+    return YES;
+    
+}
 
 
 //JS 调用OC 方法并且传参,要你管啊 你想也不想啊 干啥的额
@@ -259,14 +290,18 @@
             vc.sendStrBlock = ^(NSString *str) {
                 
                 [weakSelf.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alertMessage('%@')",str]];
-                
+//                [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
             };
             [weakSelf.navigationController pushViewController:vc animated:YES];
         });
 
     };
     
+  
 
+    [webView layoutIfNeeded];
+    [webView layoutSubviews];
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
