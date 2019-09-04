@@ -25,6 +25,7 @@
 		58375BDB22CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 58375BD822CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.m */; };
 		58375BDC22CB5ED800BA16E1 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58375BD922CB5ED800BA16E1 /* MBProgressHUD.bundle */; };
 		58375BDF22CB5F4000BA16E1 /* WBQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58375BDE22CB5F4000BA16E1 /* WBQRCodeVC.m */; };
+		5840A2ED231A0546007D1C1B /* UIWebView+TSWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5840A2EC231A0546007D1C1B /* UIWebView+TSWebViewDelegate.m */; };
 		5850BDB322CA06450027A357 /* Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850BDB122CA06440027A357 /* Crash.m */; };
 		666C94C922B930CF00296120 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */; };
 		666C94CC22BA664200296120 /* zkShowVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C94CB22BA664200296120 /* zkShowVIew.m */; };
@@ -82,6 +83,8 @@
 		58375BD922CB5ED800BA16E1 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		58375BDD22CB5F3F00BA16E1 /* WBQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBQRCodeVC.h; sourceTree = "<group>"; };
 		58375BDE22CB5F4000BA16E1 /* WBQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBQRCodeVC.m; sourceTree = "<group>"; };
+		5840A2EB231A0546007D1C1B /* UIWebView+TSWebViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TSWebViewDelegate.h"; sourceTree = "<group>"; };
+		5840A2EC231A0546007D1C1B /* UIWebView+TSWebViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TSWebViewDelegate.m"; sourceTree = "<group>"; };
 		5850BDB122CA06440027A357 /* Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crash.m; sourceTree = "<group>"; };
 		5850BDB222CA06450027A357 /* Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crash.h; sourceTree = "<group>"; };
 		666C94C722B930CF00296120 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				583041AC22B733AD00B4BE42 /* AppDelegate.m */,
 				583041AE22B733AD00B4BE42 /* ViewController.h */,
 				583041AF22B733AD00B4BE42 /* ViewController.m */,
+				5840A2EB231A0546007D1C1B /* UIWebView+TSWebViewDelegate.h */,
+				5840A2EC231A0546007D1C1B /* UIWebView+TSWebViewDelegate.m */,
 				58375BDD22CB5F3F00BA16E1 /* WBQRCodeVC.h */,
 				58375BDE22CB5F4000BA16E1 /* WBQRCodeVC.m */,
 				5834B4D522CA13DB0044BB95 /* FangZhiCrachVC.h */,
@@ -436,6 +441,7 @@
 				5850BDB322CA06450027A357 /* Crash.m in Sources */,
 				583041AD22B733AD00B4BE42 /* AppDelegate.m in Sources */,
 				58375BDB22CB5ED800BA16E1 /* MBProgressHUD+SGQRCode.m in Sources */,
+				5840A2ED231A0546007D1C1B /* UIWebView+TSWebViewDelegate.m in Sources */,
 				5836EBA322CCAF7D00EE6611 /* UICKeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

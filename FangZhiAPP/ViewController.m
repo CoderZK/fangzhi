@@ -20,7 +20,7 @@
 #import "WBQRCodeVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import "UICKeyChainStore.h"
-
+#import "UIWebView+TSWebViewDelegate.h"
 
 #define SSSSBarH [UIApplication sharedApplication].statusBarFrame.size.height
 #define HHHHHH [UIScreen mainScreen].bounds.size.height
@@ -30,7 +30,7 @@
 
 
 //#define  URLURL [@"http://www.movida-italy.com/app/index.asp" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
-@interface ViewController ()<UIWebViewDelegate,zkShowVIewDelegate>
+@interface ViewController ()<UIWebViewDelegate,zkShowVIewDelegate,TSWebViewDelegate>
 @property (nonatomic,weak) JSContext * context;
 @property(nonatomic,strong)UIButton *settingBt;
 @property(nonatomic,strong)UIView *backV;
@@ -41,6 +41,7 @@
 @property(nonatomic , strong)UIView *backView;
 /**  */
 @property(nonatomic , assign)BOOL isShow;
+
 
 
 @end
@@ -145,7 +146,35 @@
      [self.backV addSubview:rightbb];
     
     
+//    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(200, 400, 60,  30)];
+//    button.backgroundColor =[UIColor greenColor];
+//    button.tag = 100;
+//    [button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+//    [button setTitle:@"有#" forState:   UIControlStateNormal];
+//    [self.view addSubview:button];
+//
+//    UIButton * button1 = [[UIButton alloc] initWithFrame:CGRectMake(270, 400, 60,  30)];
+//    button1.backgroundColor =[UIColor redColor];
+//    button1.tag = 101;
+//    [button1 addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+//    [button1 setTitle:@"无#" forState:   UIControlStateNormal];
+//    [self.view addSubview:button1];
+    
+    
 }
+
+
+- (void)action:(UIButton *)button {
+    if (button.tag == 100) {
+        
+         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/colorcard/borrow3.asp#"]]];
+    }else {
+          [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.movida-italy.com/app/colorcard/borrow3.asp"]]];
+        
+    }
+}
+
+
 
 -(void)doSwipe:(UISwipeGestureRecognizer *)sender{
     CGPoint point = [sender locationInView:self.view];
@@ -226,16 +255,16 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     NSLog(@"开始加载网页");
     
-    NSURLRequest * request = (NSURLRequest *)webView.request;
-    NSString * str = request.URL.relativeString;
+//    NSURLRequest * request = (NSURLRequest *)webView.request;
+//    NSString * str = request.URL.relativeString;
 
-    NSLog(@"\nnnn-======%@",str);
+//    NSLog(@"\nnnn-======%@",str);
     
     
     
-    NSString * str2 = [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.innerHTML"];
+//    NSString * str2 = [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.innerHTML"];
     
-    NSLog(@" \n 111111111111111111\n%@\n11111111111111111\n",str2);
+//    NSLog(@" \n 111111111111111111\n%@\n11111111111111111\n",str2);
 
     
 //
@@ -265,6 +294,11 @@
     
 }
 
+- (void)webView:(UIWebView *)webView didCreateJavaScriptContext:(JSContext *)ctx {
+//    NSLog(@"\n%@",@"回来了回来了啊!");
+//    ctx[@"JsBridge"] = self;
+//    ctx[@"js_invoke"] = self;
+}
 
 //JS 调用OC 方法并且传参,要你管啊 你想也不想啊 干啥的额
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -274,7 +308,7 @@
     if (![scheme isEqualToString:@"https"] && ![scheme isEqualToString:@"http"]) {
         [[UIApplication sharedApplication] openURL:url];
     }
-    NSLog(@"%@",@"网页加载王城");
+//    NSLog(@"%@",@"网页加载王城");
     //获取JS运行环境
     _context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     //html 调用无惨OC
