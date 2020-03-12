@@ -70,6 +70,7 @@
 		583041DE22B7348300B4BE42 /* UIView+KKEB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKEB.m"; sourceTree = "<group>"; };
 		583041E022B7384400B4BE42 /* zkYanPiaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkYanPiaoVC.h; sourceTree = "<group>"; };
 		583041E122B7384400B4BE42 /* zkYanPiaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkYanPiaoVC.m; sourceTree = "<group>"; };
+		58325E8523AB0BAC00EECE07 /* readMe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = readMe.h; sourceTree = "<group>"; };
 		5834B4D522CA13DB0044BB95 /* FangZhiCrachVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FangZhiCrachVC.h; sourceTree = "<group>"; };
 		5834B4D622CA13DB0044BB95 /* FangZhiCrachVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FangZhiCrachVC.m; sourceTree = "<group>"; };
 		5834B4D722CA13DB0044BB95 /* FangZhiCrachVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FangZhiCrachVC.xib; sourceTree = "<group>"; };
@@ -180,6 +181,7 @@
 				5834B4D722CA13DB0044BB95 /* FangZhiCrachVC.xib */,
 				666C94CA22BA664200296120 /* zkShowVIew.h */,
 				666C94CB22BA664200296120 /* zkShowVIew.m */,
+				58325E8523AB0BAC00EECE07 /* readMe.h */,
 				583041B122B733AD00B4BE42 /* Main.storyboard */,
 				583041B422B733AF00B4BE42 /* Assets.xcassets */,
 				583041B622B733AF00B4BE42 /* LaunchScreen.storyboard */,
@@ -616,6 +618,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 73D5T6D5VH;
 				INFOPLIST_FILE = FangZhiAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -641,6 +644,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 73D5T6D5VH;
 				INFOPLIST_FILE = FangZhiAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
