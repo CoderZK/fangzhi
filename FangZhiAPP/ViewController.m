@@ -96,7 +96,7 @@
       BOOL isOK  = [keychainStore setString:[NSString stringWithFormat:@"%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]] forKey:@"FangZhipasswordabc"];
     }
 
-    NSString *encodedString=[[NSString stringWithFormat:@"%@?imei=%@",URLURL,device] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedString=[[NSString stringWithFormat:@"%@?imei=%@",URLURL,@""] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedString]]];
     web.scrollView.bounces = NO;
     [web sizeToFit];
@@ -218,38 +218,38 @@
     }
 }
 
-- (void)clickAction:(UIButton *)button {
-    if (button.tag == 0) {
-        if([self.webView canGoBack]) {
-            [self.webView goBack];
-        }
-    }else if (button.tag == 1) {
-        
-        //        [self shareWithSetPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine),@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ)] withUrl:@"" shareModel:nil];
-        
-        
-        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URLURL]]];
-        
-        //
-        //        [self shareWithSetPreDefinePlatforms:nil withArr:@[@"123",@"456"]];
-        //        return;
-        //
-        //          [self fetchAddressBookOnIOS9AndLater];
-        //        if ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts] == CNAuthorizationStatusAuthorized) {
-        //            NSDictionary * dict = @{@"code":@(1),@"data":[self.dataArray subarrayWithRange:NSMakeRange(0, 6)]};
-        //            NSString * atrr =  [self convertToJsonDataWithDict:dict];
-        //            NSLog(@"\n====%@",atrr);
-        //            [SVProgressHUD showSuccessWithStatus:atrr];
-        //        }else {
-        //            NSDictionary * dict = @{@"code":@(-1),@"data":@[]};
-        //            NSString * atrr =  [self convertToJsonDataWithDict:dict];
-        //            NSLog(@"\n====%@",atrr);
-        //            [SVProgressHUD showSuccessWithStatus:atrr];
-        //
-        //        }
-        
-    }
-}
+//- (void)clickAction:(UIButton *)button {
+//    if (button.tag == 0) {
+//        if([self.webView canGoBack]) {
+//            [self.webView goBack];
+//        }
+//    }else if (button.tag == 1) {
+//        
+//        //        [self shareWithSetPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine),@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ)] withUrl:@"" shareModel:nil];
+//        
+//        
+//        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URLURL]]];
+//        
+//        //
+//        //        [self shareWithSetPreDefinePlatforms:nil withArr:@[@"123",@"456"]];
+//        //        return;
+//        //
+//        //          [self fetchAddressBookOnIOS9AndLater];
+//        //        if ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts] == CNAuthorizationStatusAuthorized) {
+//        //            NSDictionary * dict = @{@"code":@(1),@"data":[self.dataArray subarrayWithRange:NSMakeRange(0, 6)]};
+//        //            NSString * atrr =  [self convertToJsonDataWithDict:dict];
+//        //            NSLog(@"\n====%@",atrr);
+//        //            [SVProgressHUD showSuccessWithStatus:atrr];
+//        //        }else {
+//        //            NSDictionary * dict = @{@"code":@(-1),@"data":@[]};
+//        //            NSString * atrr =  [self convertToJsonDataWithDict:dict];
+//        //            NSLog(@"\n====%@",atrr);
+//        //            [SVProgressHUD showSuccessWithStatus:atrr];
+//        //
+//        //        }
+//        
+//    }
+//}
 
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
