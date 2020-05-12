@@ -1,0 +1,2195 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		59CEE9D6F6016BD1B1C9DB3F7774066F /* UMCErrorCatch */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 409ABA0B24E7C834C540489EF48499B4 /* Build configuration list for PBXAggregateTarget "UMCErrorCatch" */;
+			buildPhases = (
+			);
+			dependencies = (
+				E4D65337327B590BC199C13F75FF9DB3 /* PBXTargetDependency */,
+			);
+			name = UMCErrorCatch;
+		};
+		6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5AEEDA8C0720EB1512D73383FC99DBCA /* Build configuration list for PBXAggregateTarget "UMCCommon" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = UMCCommon;
+		};
+		8B5BB4D9C85FBB3B774B6C624239821A /* UMCSecurityPlugins */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 190655FCAD77AF902F754A3C659ACED2 /* Build configuration list for PBXAggregateTarget "UMCSecurityPlugins" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = UMCSecurityPlugins;
+		};
+		E61FA54B27DC950F09491A8994516EA6 /* UMengUShare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5E2F4D473B8263B65622ACB5794CEE6C /* Build configuration list for PBXAggregateTarget "UMengUShare" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = UMengUShare;
+		};
+		FD2E8643412994484A50DA7D3BFB1EFC /* UMCAnalytics */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0AB572C555CB9F73E058CDA90732AF60 /* Build configuration list for PBXAggregateTarget "UMCAnalytics" */;
+			buildPhases = (
+			);
+			dependencies = (
+				D6F37A14E44787E5115BD54D5A2580C5 /* PBXTargetDependency */,
+			);
+			name = UMCAnalytics;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		041AAA89FA52A8486415533C4EAEE6D8 /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = B85C5ED4697BE22F1CBB7CEEF1764469 /* NSObject+MJClass.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		065314D2B2F9A8F11945338AF442687F /* QRCodeReaderAanimationLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE384ECDBFBA2788BBEAECC982E9AF8 /* QRCodeReaderAanimationLineView.m */; };
+		095F3C503CB2FE8E49313FDF284BA522 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DFD29C33F8558E2D2D403DAFB43134 /* UIScrollView+MJExtension.m */; };
+		0B0C38C60AEB46F41A16600E38A48547 /* SGQRCodeObtain.m in Sources */ = {isa = PBXBuildFile; fileRef = E232661DABFC10637D888F963F7800B5 /* SGQRCodeObtain.m */; };
+		0CCA214D24EFB57D5738035EA1F635D8 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A2080EEB8F0EFEF0963465033005 /* SVProgressHUD.m */; };
+		137D69B65677A5FFAAAABE2B5C30E5DC /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 159F6C5D291A6AFD290690B5537045FB /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		146D7BA20463FE68B3E6AD5DF2AE94B1 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD3B15C2B0ABC850F0CDB70A9097FC8 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		15D6A74E9209DB5C6F2CCE917381E3F0 /* SGQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 43B2F33244780F55D1359B3DE72CF2E6 /* SGQRCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		161BDA6A0971E84071803054E97F53E3 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156F9EDACF7AA0FF810AC5240744233 /* QRCodeReader.m */; };
+		1A57AEF4817CA757E4043EA1C1FC70C2 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B4A2637B5F5359CC02FA394DE6E88E /* MJRefreshBackFooter.m */; };
+		1B9D8756296CAC95F9F3F0C1369064C5 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 160E4BC30A96A9CF3997441047A7099C /* MJRefreshFooter.m */; };
+		1E9813FE8319518E9671984E47B4612D /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2E7388AADCA0494C32C69AA7DD9550 /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		21474CB2DB5DD2A7007C67AD16CB433A /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B9CC596BD2F55F8AD9CACFA468528290 /* QRCodeReaderDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		244D4C7C591D88D04E5C6A5E4D7B6B84 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B01D43941E4CAB694072CA17D9F00352 /* MJFoundation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		24BC95804921190B22F5145F6069A348 /* MJRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3FFC1F0AAC6CDDDDB21D2571D31DD6 /* MJRefresh-dummy.m */; };
+		25E3C98FB05563DFA0803F9D85DCED03 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A578ABD417FFC97A0969CBB97E2A76 /* MJRefreshConst.m */; };
+		2744C6447F6EFCEE989E426A82244B3A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D189E64A82A73959F70AA000F1EE003 /* NSObject+MJKeyValue.m */; };
+		2ADB228BC1DEE519FFA2BDA98403C76C /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5387D06C21E62CC04DF680C5577B2846 /* MJRefreshComponent.m */; };
+		3106FEF39E850CF8B8395383D564496D /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E142A2DD964E9A060BC8839299C520 /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31FADEC93AE54F48E6EBD9FE820783D5 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E17333423A961D659220CE1EA3247BC8 /* MJRefreshAutoGifFooter.m */; };
+		34960A613CDDE2452DD1FAE0F90A83BD /* SGQRCodeObtain.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5FF46DF629263A532C31319B423C8D /* SGQRCodeObtain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		36B3F1C047392BF452B2BA995D573CE6 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004A867E39B15BA3970342FF46F4454 /* MJProperty.m */; };
+		3731D5A272A50C5DDFFAF43B6D514B14 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 35602B36602489A50D1B1918EC9C8493 /* MJPropertyType.m */; };
+		38D7CD3CED44A3831DAFDD092C1EC7E3 /* SGQRCodeObtainConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = A82B87FF483828E5A5CED81FAE7D09D0 /* SGQRCodeObtainConfigure.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3BBB61E48C6423A5DED878C2C32B581C /* MJRefreshStateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 214444F56C643574807080284A12F126 /* MJRefreshStateHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3EB2755590C1381239B919564D7CD061 /* MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = A8E8FA3DE8AA5B8BE8CC00E1A116DBE7 /* MJRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41604A733861D95E0C68379A15FFC461 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 016DF862460825200AEF9FF8379C78F9 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41A849FD415D23138C168D68DDCC315F /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BA72CAD163BBC2452562849A0281DA70 /* MJRefreshGifHeader.m */; };
+		41C7FE6088565F5A722F9D439DB968D7 /* MJRefreshBackFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 26EAB232D46A66EED339353166758D0E /* MJRefreshBackFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4868E4CFB1801C5AB423C480EAEF88DD /* MJRefreshHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 869E6CE7861A2AA76A509A8FCC6F3149 /* MJRefreshHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4A75E3924BA01521FBD94FFCC9B156F7 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 532E6392E647A07EFA387543A7D2BC08 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CAA6A2CAA60898A5732E7BCB2526DC6 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 27553E82B7CB03C366649FC52DA6E4B7 /* MJPropertyKey.m */; };
+		4DFE545EA07FBD786872CBE37C8CE886 /* MJRefreshAutoFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 86A78D15F843865BD16ECF81A152C0E6 /* MJRefreshAutoFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4FFACC2C490D178AA9D812F979D97EBC /* Pods-FangZhiAPP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 604917894DD1F6D0E9D2CBAA827D75CA /* Pods-FangZhiAPP-dummy.m */; };
+		53673BA19B4715F1628B8BD220DCD86B /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D827DECE6C0706B7929E303ECF1D38 /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		59C2C0569D4E092CA12DFCA3D6401DD4 /* MJRefreshGifHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 37D83FA1F1ABA2631FE6B48E69C28DD9 /* MJRefreshGifHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C3F7EE69D6BE1B98A0D2105D41EA3C5 /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5347F34EBB29CE1222E3E4A2B66A0EE1 /* QRCameraSwitchButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E4B0E9670746616DF8D689115C65E2F /* QRCodeReaderViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 666DE6D2A10FCE7E8C9641D1FAA88F9E /* QRCodeReaderViewController-dummy.m */; };
+		5EFCE3469BEEEB5DB4755A99FF122B37 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C6727192B97B7A7BBD779BBDD267F10B /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		60B5A8B1DA52908D0136423E30CC7B15 /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = F16C7D7132231378CD27A8A3361A03C7 /* QRCodeReaderView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		649DA0884E358886ACB21F18AD13FA60 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9DF2EA7070711DD942FA97200B2145 /* MJRefreshAutoNormalFooter.m */; };
+		64C58BCA8C7EAEAD7A333B25FA6652D9 /* QRCodeReaderMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29989E6C31136DF236D6D3791863AFEF /* QRCodeReaderMaskView.m */; };
+		68CABABC7CAE708E8D466D1EABCD1012 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43818DEFE418E77F4FB1135EAD83977C /* QRCameraSwitchButton.m */; };
+		6BD922ACFD8A6F139A8C6DCCA5198E8F /* MJRefreshAutoStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCD35EDA91BBBEEA2EDD2EAFFA920BB /* MJRefreshAutoStateFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6EFFDF24BD3102E15C771845B5183B3D /* NSBundle+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D32A2DF6EBEED4B41B6C58C8C60056D /* NSBundle+MJRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		700EFAEA65A951F527A435B1FC88DBC8 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE5971B8CE68105AA2C54F127A58CD /* NSObject+MJCoding.m */; };
+		76839E1C0ECC33D279E4340839B7DE87 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09C2DF542FC12557D231FFDF66CB3A /* MJRefreshAutoFooter.m */; };
+		7921B4D22EEB6C59956DAB28FB17DA02 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B506CA610ED0260F11D2EDB25660C /* MJRefreshStateHeader.m */; };
+		7D7F785DB467EBE40294F93CA5F51E3B /* QRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 745B5268BB154472608E17239CE8F9ED /* QRCodeReader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		829096BB133DB7757B1FBFD9FBF559D3 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB66B755542BF5BEBCD432DE8DC62971 /* MJRefreshNormalHeader.m */; };
+		82B56BD11BE29F8A77FA2CCF8D481AC7 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C673D0F57D7CA7C76DF9B05A582D940 /* MJRefreshBackGifFooter.m */; };
+		898DD2D6B037B8C5DA870DCCFBADB47E /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3787F57AE7D05A346D01D4C09E4D0720 /* QRCodeReaderView.m */; };
+		89EDEFF292953DCFB91FBC82611B006A /* MJRefreshBackStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A14C3DB86B01275F79D48CE59F672DE /* MJRefreshBackStateFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BE70B4511E376EF79284AC782541958 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F29E957DE7FD31CBB1D6DC9BC694F /* MJRefreshBackNormalFooter.m */; };
+		92CFA868869DEC409C9B583990AD8D80 /* MJRefreshComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = D87371A73F5DDA50275965B67DDC88E7 /* MJRefreshComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		95E622E7BFAB8AA6062C835F0BAD86FA /* SGQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ABBBCC633CAFAC7853F0AE26752FF4 /* SGQRCode-dummy.m */; };
+		9ABEC337A4B11CD78FE53B7A02F2944C /* MJRefreshAutoNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EAA15DFA0BF720DAA3DACA2C3DE06C /* MJRefreshAutoNormalFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F29A2C79A3A3BD306183C7087963C66 /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FAAF2FB11135AF85F4EB1DB80ABF1C4 /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A363528B7E5AD5CAE0EF16967FAB5513 /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3143720E0C9B045C491BF707942812 /* MJRefreshConfig.m */; };
+		A3A33ABA15937783434DA79B22FCC2CE /* MJRefreshConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 0710DC28E06F551036E148B7C11A2762 /* MJRefreshConst.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6A1E7EEDAA62C997DDD67FC51116F2B /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 688A33756D91CD45E185B18E7A6B15BD /* MJRefreshHeader.m */; };
+		AA9551584A28E2836421BCB243FEF21B /* UIView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A14789B9F5D969CD7BBF14448BA9F57F /* UIView+MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF4E787479876DA6F5BA9461B20319CA /* SGQRCodeScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB7A856A6337AB2DAD12D9BAFBD5532 /* SGQRCodeScanView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AFE25C0E393730522E21BF7F311D0581 /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EEA51367FBDFEBC89F14E38300F2F3E /* QRCodeReaderViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B2B45B29C6F7378527E37F384A2972A0 /* UIScrollView+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 033FE131B1DF876756C464CB3E7B2E3D /* UIScrollView+MJRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B32417D8F3501827770402E7C5121BE6 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 98235140872DBB1FE87E29E5D0806BC3 /* UIView+MJExtension.m */; };
+		B4D9E769E8BB098B8C5FCF0A1E20B474 /* MJRefreshConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 76159D9624939E2705C69E680024990A /* MJRefreshConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4FBA7C4B92E5A1C0AD37ABDF0AA6C13 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BCBD9C69B457A62201B06E2353687B /* UIScrollView+MJRefresh.m */; };
+		B6F59CFCB1B5C81A6AA5C6C1C610B439 /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFEF1F6CB2838BF000B510C137F791 /* NSBundle+MJRefresh.m */; };
+		B815B7977B3EF5E3627767C2FB383FC1 /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A7A1EB724E2A9EBA41EC46D923BFA /* MJExtension-dummy.m */; };
+		BFE58ADAF3535B807B6F360E82AC422F /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA158F4CD8083A36B8B095AEFD9B45 /* MJRefreshBackStateFooter.m */; };
+		C15E256ECBEF8CA2144819E12C81430D /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3946FE54F553EAF20B4765EE4B0BD4D9 /* QRCodeReaderViewController.m */; };
+		C412682CD95AE1E35211C6AF76B338D1 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1EEC4A9B72E9CBFBB74D153EF8C4F1 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C56330817DA6C77A1EFA11A43AF37012 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D28907516FC4C1FD769D59D2F24F71CD /* NSObject+MJClass.m */; };
+		C8098D09919C451D45CA7207EE2B5A9E /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = B91AC30DBDE1124A69B26F1955744B8F /* MJPropertyType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCFB6897BF510A8680B3AD1BDE11BC16 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8997922F8F0DE3E6CBB48A3FFC7DC293 /* SVIndefiniteAnimatedView.m */; };
+		D147F4D4AF791EBA9430EA3E7DB2288D /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6FD8B132A1FE72B1998345DBAD4C45 /* MJExtensionConst.m */; };
+		D331894E7FCD61A105B437459C1FB59F /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E40CF25AF52F4461EA3AC3AEACB92397 /* MJFoundation.m */; };
+		D5C12AFB769D9700D137A1688FB81B3D /* QRCodeReaderMaskView.h in Headers */ = {isa = PBXBuildFile; fileRef = 080D9B6B1E6FF408F6F344FDDCDEA46D /* QRCodeReaderMaskView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D9273213F5699BF4C3D42AE82056A7A5 /* SGQRCodeObtainConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4736C4E175CEFFC7320C47FB4FB17 /* SGQRCodeObtainConfigure.m */; };
+		DAB809B8400577F9001EB624177C0C86 /* QRCodeReaderAanimationLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 671CD9951008C5F51822398AD83300DB /* QRCodeReaderAanimationLineView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DCB5098E40D947979639886A70DD9450 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E50D7AE510E8BBF1FD8031605286DE1 /* NSString+MJExtension.m */; };
+		DE8CF3F842F08C11098B8369BBAA2FD2 /* MJRefreshNormalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DBBCEBA1194B33376328A4A7F6D0DCB /* MJRefreshNormalHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E0303DD2BF4E3C0615538C90905F515C /* UIScrollView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9892C3FB5758FA7B8DD2944A24A24D6D /* UIScrollView+MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E131C9D49378BDA0D63CE549C4A5B29D /* SGQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58747315A191BC0372E6E9F8ED793E4A /* SGQRCodeScanView.m */; };
+		E24CD612F0E3703041BEBEB83B418938 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A59EAFD3CB20CB9740F0AFC17E48C /* SVProgressHUD-dummy.m */; };
+		E2A06742F01B43B904C79B0187F2A7FD /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2F3F745BE78F8778719058C071148E /* MJProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ECCB898E997FAC6AAE9DB13E54E9881E /* MJRefreshBackGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = F53F192665B4C26CC53C916A0ACD718C /* MJRefreshBackGifFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ED5879067A61148ACD844C8F945A434E /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = AADAD1DC38B391EDC7EF0938DDD18519 /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ED6208254906D192A1AF1F835A96BCD6 /* MJRefreshBackNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 307AF9D8FAC12673E921B8B4B1EB280E /* MJRefreshBackNormalFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F02579CF0F1F091EA00313A9FEFF9516 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCA08D4C9F2F1E336FE16EF13A4955 /* SVRadialGradientLayer.m */; };
+		F031041A4719E9B94B10C385665EF0E9 /* MJRefreshFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8F6E2EDAB83CE2B111FD7A12DA96DB /* MJRefreshFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F2F1CE67A7F7055FBD76E2692A053BAE /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0174C871711F6826E4A08D9CC6C1E6 /* MJRefreshAutoStateFooter.m */; };
+		F4306188C9FC14FDD13E9C42DB56C138 /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 577A6B708224DA93608198C0664FB796 /* MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA35FE72909EB4FCFA1028E71373E2EF /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B989F403B6FBC700B5FC89699A97DA1A /* SVProgressAnimatedView.m */; };
+		FEFDFEB35504EE8FB0CFA313948E2A82 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A04C206FC015E638F94EA922D6219749 /* NSObject+MJProperty.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14CDA15A149E5E0CB6EA4239A01D5A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6B630FA5213AB083E7CEF1F986FE44;
+			remoteInfo = UMCCommon;
+		};
+		1700E74D79802200DFE9B2872B19EEE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59CEE9D6F6016BD1B1C9DB3F7774066F;
+			remoteInfo = UMCErrorCatch;
+		};
+		291BA652A712BD2C8A13BE6581C54C28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2035A387A5D5D85BEF7F693731454A3D;
+			remoteInfo = SGQRCode;
+		};
+		53023D3FFE4E5A2884C7F8871827AE08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6B630FA5213AB083E7CEF1F986FE44;
+			remoteInfo = UMCCommon;
+		};
+		5B13AD0FA99055A0A302ACF1455DD548 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B5BB4D9C85FBB3B774B6C624239821A;
+			remoteInfo = UMCSecurityPlugins;
+		};
+		6D9D0559629FFF02405E5B0B64EA6E11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6868056D761E163D10FDAF8CF1C4D9B8;
+			remoteInfo = MJRefresh;
+		};
+		96C4DDE0A7D660E30CFB27E11229E11D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6B630FA5213AB083E7CEF1F986FE44;
+			remoteInfo = UMCCommon;
+		};
+		A0E2D2B9E67B1BFCAD3FFCA0D7599A24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E61FA54B27DC950F09491A8994516EA6;
+			remoteInfo = UMengUShare;
+		};
+		B391FD3E8F4495602A9FF87DD53D3DC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
+			remoteInfo = MJExtension;
+		};
+		BF835804344DF7CF1780ABEA55465309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8FC4FD750AC24CAD841A7FB89CA76C6;
+			remoteInfo = QRCodeReaderViewController;
+		};
+		C97349AB6912F8720A83840935F0B3A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD2E8643412994484A50DA7D3BFB1EFC;
+			remoteInfo = UMCAnalytics;
+		};
+		CD7D06B55F460A0326DD3E00C167EB9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8D67D8B72D6BA42CCEDB648537A340;
+			remoteInfo = SVProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016DF862460825200AEF9FF8379C78F9 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		031B81768206A3C9B6E4D6C1FC9ACD71 /* SGQRCode.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SGQRCode.bundle; path = SGQRCode/SGQRCode.bundle; sourceTree = "<group>"; };
+		033FE131B1DF876756C464CB3E7B2E3D /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		0473DE8BA657F7ED82E7ACC0BA932E3D /* UMCSecurityPlugins.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCSecurityPlugins.xcconfig; sourceTree = "<group>"; };
+		04DC72C5D3CA97E908393579DA18DFB9 /* SGQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGQRCode-prefix.pch"; sourceTree = "<group>"; };
+		06BF723F41FD63947703DC92C478B2A2 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		0710DC28E06F551036E148B7C11A2762 /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
+		0720434C0836EFF9AA22F2FDBD0306F5 /* Pods-FangZhiAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FangZhiAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		073C64F31007EAFBC980F867347E5EDF /* libSocialQQ.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialQQ.a; path = UShareSDK/SocialLibraries/QQ/libSocialQQ.a; sourceTree = "<group>"; };
+		080D9B6B1E6FF408F6F344FDDCDEA46D /* QRCodeReaderMaskView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderMaskView.h; path = QRCodeReaderViewController/QRCodeReaderView/QRCodeReaderMaskView.h; sourceTree = "<group>"; };
+		0A09C2DF542FC12557D231FFDF66CB3A /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		0A1EEC4A9B72E9CBFBB74D153EF8C4F1 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		0B9842CAC8DB2FEB3264C714AD3B582E /* Pods-FangZhiAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FangZhiAPP.release.xcconfig"; sourceTree = "<group>"; };
+		0FAAF2FB11135AF85F4EB1DB80ABF1C4 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		1156F9EDACF7AA0FF810AC5240744233 /* QRCodeReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReader.m; path = QRCodeReaderViewController/QRCodeReader.m; sourceTree = "<group>"; };
+		13CEA1C8B0001C55F60E6D124C8EAFFF /* UMengUShare.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMengUShare.xcconfig; sourceTree = "<group>"; };
+		1425B68CE5CD06A576A7C3C0EB4F3937 /* WBHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBHttpRequest.h; path = UShareSDK/SocialLibraries/Sina/SinaSDK/WBHttpRequest.h; sourceTree = "<group>"; };
+		159F6C5D291A6AFD290690B5537045FB /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		160E4BC30A96A9CF3997441047A7099C /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
+		1D32A2DF6EBEED4B41B6C58C8C60056D /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
+		1DE384ECDBFBA2788BBEAECC982E9AF8 /* QRCodeReaderAanimationLineView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderAanimationLineView.m; path = QRCodeReaderViewController/QRCodeReaderView/QRCodeReaderAanimationLineView.m; sourceTree = "<group>"; };
+		214444F56C643574807080284A12F126 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		219712E464C4A16FEEF1F6DB5C1463ED /* Pods-FangZhiAPP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FangZhiAPP-acknowledgements.plist"; sourceTree = "<group>"; };
+		21C64230C3EB0E69ACCAD112DE0CB394 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		2238FA3A369448E7373D732AB0512D89 /* QRCodeTopRight@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeTopRight@3x.png"; path = "QRCodeReaderViewController/Resources/QRCodeTopRight@3x.png"; sourceTree = "<group>"; };
+		26EAB232D46A66EED339353166758D0E /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		27553E82B7CB03C366649FC52DA6E4B7 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
+		29989E6C31136DF236D6D3791863AFEF /* QRCodeReaderMaskView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderMaskView.m; path = QRCodeReaderViewController/QRCodeReaderView/QRCodeReaderMaskView.m; sourceTree = "<group>"; };
+		2AA6B69CE122140E30C7D82BCC8CB409 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WeiboSDK+Statistics.h"; path = "UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
+		2ACB44D7F447C109FF34011052D0C3C7 /* WeiboSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle; sourceTree = "<group>"; };
+		2B0FABD4F481269B5FDC20DA5E0E8DA4 /* UMCCommon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCCommon.xcconfig; sourceTree = "<group>"; };
+		2C341867E6C9BEE0C97928B595D9F65D /* QRCodeBottomRight@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeBottomRight@2x.png"; path = "QRCodeReaderViewController/Resources/QRCodeBottomRight@2x.png"; sourceTree = "<group>"; };
+		307AF9D8FAC12673E921B8B4B1EB280E /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		30B51D68AA5E100F89422A6771240311 /* QRCodeBottomRight@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeBottomRight@3x.png"; path = "QRCodeReaderViewController/Resources/QRCodeBottomRight@3x.png"; sourceTree = "<group>"; };
+		33BCBD9C69B457A62201B06E2353687B /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		35602B36602489A50D1B1918EC9C8493 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
+		35A74DF8FDD153B9194F218C8590F4E2 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
+		3608D71BCC1ADE75B844CA45CCC81F29 /* QRCodeTopRight@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeTopRight@2x.png"; path = "QRCodeReaderViewController/Resources/QRCodeTopRight@2x.png"; sourceTree = "<group>"; };
+		3787F57AE7D05A346D01D4C09E4D0720 /* QRCodeReaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderView.m; path = QRCodeReaderViewController/QRCodeReaderView/QRCodeReaderView.m; sourceTree = "<group>"; };
+		37D83FA1F1ABA2631FE6B48E69C28DD9 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
+		3946FE54F553EAF20B4765EE4B0BD4D9 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderViewController.m; path = QRCodeReaderViewController/QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		3A14C3DB86B01275F79D48CE59F672DE /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
+		3D189E64A82A73959F70AA000F1EE003 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		3D2E7388AADCA0494C32C69AA7DD9550 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		3EC2CF95FB3D5C06D7D52CCAA231152B /* UMSocialSDKPromptResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKPromptResources.bundle; path = UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle; sourceTree = "<group>"; };
+		3F3143720E0C9B045C491BF707942812 /* MJRefreshConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConfig.m; path = MJRefresh/MJRefreshConfig.m; sourceTree = "<group>"; };
+		3F7D5B16819DE0FACAC76317EAB6B3F6 /* libMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMJExtension.a; path = libMJExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4074DDC2F21400C8E68C4E8496303F22 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = UShareSDK/SocialLibraries/WeChat/WechatSDK/libWeChatSDK.a; sourceTree = "<group>"; };
+		43818DEFE418E77F4FB1135EAD83977C /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCameraSwitchButton.m; path = QRCodeReaderViewController/QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		43B2F33244780F55D1359B3DE72CF2E6 /* SGQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGQRCode.h; path = SGQRCode/SGQRCode.h; sourceTree = "<group>"; };
+		4723CA1833BE10D6847B4A59E1107DE8 /* SecurityEnvSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityEnvSDK.framework; path = thirdparties/SecurityEnvSDK.framework; sourceTree = "<group>"; };
+		4875517B3EB1A4FA13AB98103187F002 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		49ABBBCC633CAFAC7853F0AE26752FF4 /* SGQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SGQRCode-dummy.m"; sourceTree = "<group>"; };
+		4AE86EBBCD2F7D1354623874AF3E91CD /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = UShareSDK/SocialLibraries/WeChat/WechatSDK/WXApi.h; sourceTree = "<group>"; };
+		4E10A2080EEB8F0EFEF0963465033005 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		4E8EC3D55D7D86D9DED07D204EB8B8E7 /* WeiboSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.h; sourceTree = "<group>"; };
+		4F6FD8B132A1FE72B1998345DBAD4C45 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
+		5004A867E39B15BA3970342FF46F4454 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		532E6392E647A07EFA387543A7D2BC08 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		5347F34EBB29CE1222E3E4A2B66A0EE1 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCameraSwitchButton.h; path = QRCodeReaderViewController/QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		5387D06C21E62CC04DF680C5577B2846 /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
+		577A6B708224DA93608198C0664FB796 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		5840E360E224A099AD82CC250D943D04 /* UMSocialCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMSocialCore.framework; path = UShareSDK/UMSocialSDK/UMSocialCore.framework; sourceTree = "<group>"; };
+		58747315A191BC0372E6E9F8ED793E4A /* SGQRCodeScanView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SGQRCodeScanView.m; path = SGQRCode/SGQRCodeScanView.m; sourceTree = "<group>"; };
+		592E63E58572AE1A57088B54A9A76CA1 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		5AB7A856A6337AB2DAD12D9BAFBD5532 /* SGQRCodeScanView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGQRCodeScanView.h; path = SGQRCode/SGQRCodeScanView.h; sourceTree = "<group>"; };
+		5C5FF46DF629263A532C31319B423C8D /* SGQRCodeObtain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGQRCodeObtain.h; path = SGQRCode/SGQRCodeObtain.h; sourceTree = "<group>"; };
+		5E8BEB64C0CEDC70AF7D35827C54D3E1 /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalytics.framework; sourceTree = "<group>"; };
+		5EF92CB428A18BBB5B02BBA1B40E0419 /* QRCodeTopLeft@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeTopLeft@2x.png"; path = "QRCodeReaderViewController/Resources/QRCodeTopLeft@2x.png"; sourceTree = "<group>"; };
+		604917894DD1F6D0E9D2CBAA827D75CA /* Pods-FangZhiAPP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FangZhiAPP-dummy.m"; sourceTree = "<group>"; };
+		655B506CA610ED0260F11D2EDB25660C /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
+		666DE6D2A10FCE7E8C9641D1FAA88F9E /* QRCodeReaderViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReaderViewController-dummy.m"; sourceTree = "<group>"; };
+		671CD9951008C5F51822398AD83300DB /* QRCodeReaderAanimationLineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderAanimationLineView.h; path = QRCodeReaderViewController/QRCodeReaderView/QRCodeReaderAanimationLineView.h; sourceTree = "<group>"; };
+		688A33756D91CD45E185B18E7A6B15BD /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
+		6BCE5971B8CE68105AA2C54F127A58CD /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		6C66C2EC72148F51DB846D7241F67335 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = UShareSDK/SocialLibraries/WeChat/WechatSDK/WXApiObject.h; sourceTree = "<group>"; };
+		6D8A7A1EB724E2A9EBA41EC46D923BFA /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
+		6E9F29E957DE7FD31CBB1D6DC9BC694F /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackNormalFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		7197179728108C68D55C2A8AA6BD2095 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UShareUI.framework; path = UShareSDK/UMSocialUI/UShareUI.framework; sourceTree = "<group>"; };
+		722ACF2097E3C85D4587A208B9B35DB1 /* libUMSocialLog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libUMSocialLog.a; path = UShareSDK/UMSocialSDKPlugin/libUMSocialLog.a; sourceTree = "<group>"; };
+		7424F51DCA1649842488349BE96DCD2D /* QRCodeBottomLeft@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeBottomLeft@3x.png"; path = "QRCodeReaderViewController/Resources/QRCodeBottomLeft@3x.png"; sourceTree = "<group>"; };
+		745B5268BB154472608E17239CE8F9ED /* QRCodeReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReader.h; path = QRCodeReaderViewController/QRCodeReader.h; sourceTree = "<group>"; };
+		74DFD29C33F8558E2D2D403DAFB43134 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		76159D9624939E2705C69E680024990A /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
+		76B4A2637B5F5359CC02FA394DE6E88E /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
+		791D3D4B8E7387C0C00ACDF8EB2E4F12 /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
+		7C673D0F57D7CA7C76DF9B05A582D940 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		7DBBCEBA1194B33376328A4A7F6D0DCB /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		7DCD35EDA91BBBEEA2EDD2EAFFA920BB /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoStateFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		7E50D7AE510E8BBF1FD8031605286DE1 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		7EEA51367FBDFEBC89F14E38300F2F3E /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderViewController.h; path = QRCodeReaderViewController/QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		7F7DD84F2E00BECE87BDC3D9320009C2 /* libQRCodeReaderViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libQRCodeReaderViewController.a; path = libQRCodeReaderViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D2F1ADDEC8AA746DA90E2FD568CF59 /* SGQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SGQRCode.xcconfig; sourceTree = "<group>"; };
+		869E6CE7861A2AA76A509A8FCC6F3149 /* MJRefreshHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshHeader.h; path = MJRefresh/Base/MJRefreshHeader.h; sourceTree = "<group>"; };
+		86A78D15F843865BD16ECF81A152C0E6 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
+		8997922F8F0DE3E6CBB48A3FFC7DC293 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		8A0174C871711F6826E4A08D9CC6C1E6 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
+		8BBA158F4CD8083A36B8B095AEFD9B45 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
+		8BDCA08D4C9F2F1E336FE16EF13A4955 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		8C52ED85EE140DC0BFFCD7134E7EA4A2 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBHttpRequest+WeiboToken.h"; path = "UShareSDK/SocialLibraries/Sina/SinaSDK/WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
+		8E690E9841459C2DD1E5BC824319D10D /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
+		8F9E1A69E2FD05DE4817DC9958093ABF /* libWeiboSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = UShareSDK/SocialLibraries/Sina/SinaSDK/libWeiboSDK.a; sourceTree = "<group>"; };
+		926E12F74FB3A33B3E57BF81EC06896C /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKResources.bundle; path = UShareSDK/UMSocialUI/UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		93D827DECE6C0706B7929E303ECF1D38 /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		96DF8ECB90AF7C7CAA206F41A41FB0FC /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialSinaHandler.h; path = UShareSDK/SocialLibraries/Sina/UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		98235140872DBB1FE87E29E5D0806BC3 /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
+		9888527F1BCA1C79250C2D2B7D6B29D8 /* QRCodeLine@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeLine@2x.png"; path = "QRCodeReaderViewController/Resources/QRCodeLine@2x.png"; sourceTree = "<group>"; };
+		9892C3FB5758FA7B8DD2944A24A24D6D /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		9AC0382CE4504A4ABD8F3E5549E81D87 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialWechatHandler.h; path = UShareSDK/SocialLibraries/WeChat/UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		9C8A59EAFD3CB20CB9740F0AFC17E48C /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DEC718B976C0C25CACDC15B10EE12D2 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTDID.framework; path = thirdparties/UTDID.framework; sourceTree = "<group>"; };
+		A04C206FC015E638F94EA922D6219749 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		A14789B9F5D969CD7BBF14448BA9F57F /* UIView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MJExtension.h"; path = "MJRefresh/UIView+MJExtension.h"; sourceTree = "<group>"; };
+		A2E142A2DD964E9A060BC8839299C520 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		A350355CE680007722FDF0A0C51D0D92 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialQQHandler.h; path = UShareSDK/SocialLibraries/QQ/UMSocialQQHandler.h; sourceTree = "<group>"; };
+		A538CE36BA17DFF080FA1D4D70C2DBA4 /* UMCErrorCatch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCErrorCatch.xcconfig; sourceTree = "<group>"; };
+		A82B87FF483828E5A5CED81FAE7D09D0 /* SGQRCodeObtainConfigure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGQRCodeObtainConfigure.h; path = SGQRCode/SGQRCodeObtainConfigure.h; sourceTree = "<group>"; };
+		A8E8FA3DE8AA5B8BE8CC00E1A116DBE7 /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
+		AADAD1DC38B391EDC7EF0938DDD18519 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		AB66B755542BF5BEBCD432DE8DC62971 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		AC8F6E2EDAB83CE2B111FD7A12DA96DB /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
+		B01D43941E4CAB694072CA17D9F00352 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		B4F4F178B14D103B1AAC9A23D021D869 /* libSGQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSGQRCode.a; path = libSGQRCode.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EAA15DFA0BF720DAA3DACA2C3DE06C /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
+		B7F4DF9412D9B363901FAD170BD6DD82 /* libSocialSina.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialSina.a; path = UShareSDK/SocialLibraries/Sina/libSocialSina.a; sourceTree = "<group>"; };
+		B85C5ED4697BE22F1CBB7CEEF1764469 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		B91AC30DBDE1124A69B26F1955744B8F /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		B92E1426FB4D9637F36D829DBEEBBFD5 /* QRCodeLine@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeLine@3x.png"; path = "QRCodeReaderViewController/Resources/QRCodeLine@3x.png"; sourceTree = "<group>"; };
+		B989F403B6FBC700B5FC89699A97DA1A /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		B9CC596BD2F55F8AD9CACFA468528290 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderDelegate.h; path = QRCodeReaderViewController/QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		BA0004A5A388F33CB52AE4255D526773 /* MJRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.xcconfig; sourceTree = "<group>"; };
+		BA72CAD163BBC2452562849A0281DA70 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
+		BB9DF2EA7070711DD942FA97200B2145 /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
+		BCC449CBFAD20F75911075CE9ADF7346 /* libSocialOfficialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialOfficialWeChat.a; path = UShareSDK/SocialLibraries/WeChat/WechatSDK/libSocialOfficialWeChat.a; sourceTree = "<group>"; };
+		BD0D7881D8C8319674626B3768843CD8 /* libSocialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialWeChat.a; path = UShareSDK/SocialLibraries/WeChat/libSocialWeChat.a; sourceTree = "<group>"; };
+		BDEC4FF59AD47BCBBC67DA76F7C65160 /* QRCodeReaderViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReaderViewController.xcconfig; sourceTree = "<group>"; };
+		BF3FFC1F0AAC6CDDDDB21D2571D31DD6 /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
+		BFD51E79E38E3864ACCD03C4E76D8A19 /* libMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMJRefresh.a; path = libMJRefresh.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDB02DD445960D6FEC782665BE8A31E /* UMErrorCatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMErrorCatch.framework; sourceTree = "<group>"; };
+		C4A578ABD417FFC97A0969CBB97E2A76 /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
+		C4B86BBEF1689424D5C3CCDE8F67353F /* MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.xcconfig; sourceTree = "<group>"; };
+		C62ED6AC966230E3161759B79BB2F7FB /* QRCodeReaderViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReaderViewController-prefix.pch"; sourceTree = "<group>"; };
+		C6727192B97B7A7BBD779BBDD267F10B /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		C76D93870C948B827B3876419590B5F8 /* Pods-FangZhiAPP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FangZhiAPP-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CD6D9ABF156E125B99A387CDE0C616F2 /* UMSocialNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMSocialNetwork.framework; path = UShareSDK/UMSocialSDK/UMSocialNetwork.framework; sourceTree = "<group>"; };
+		D28907516FC4C1FD769D59D2F24F71CD /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
+		D5910258010FAE5C7ACB0DB31FDF84A3 /* libPods-FangZhiAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-FangZhiAPP.a"; path = "libPods-FangZhiAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6B73AD88FCD45660500340C2248576D /* MJRefresh.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MJRefresh.bundle; path = MJRefresh/MJRefresh.bundle; sourceTree = "<group>"; };
+		D87371A73F5DDA50275965B67DDC88E7 /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshComponent.h; path = MJRefresh/Base/MJRefreshComponent.h; sourceTree = "<group>"; };
+		E0507CEC48E126433CEDDA74857AEE31 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		E115B18D622535FE45D5A194452215F4 /* QRCodeTopLeft@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeTopLeft@3x.png"; path = "QRCodeReaderViewController/Resources/QRCodeTopLeft@3x.png"; sourceTree = "<group>"; };
+		E17333423A961D659220CE1EA3247BC8 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		E232661DABFC10637D888F963F7800B5 /* SGQRCodeObtain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SGQRCodeObtain.m; path = SGQRCode/SGQRCodeObtain.m; sourceTree = "<group>"; };
+		E37FF532C7F813CEEADEF8B86B2AD3C4 /* UMCAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCAnalytics.xcconfig; sourceTree = "<group>"; };
+		E40CF25AF52F4461EA3AC3AEACB92397 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		EBD3B15C2B0ABC850F0CDB70A9097FC8 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		ECFFEF1F6CB2838BF000B510C137F791 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
+		EE2F3F745BE78F8778719058C071148E /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		F16C7D7132231378CD27A8A3361A03C7 /* QRCodeReaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderView.h; path = QRCodeReaderViewController/QRCodeReaderView/QRCodeReaderView.h; sourceTree = "<group>"; };
+		F53F192665B4C26CC53C916A0ACD718C /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackGifFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		F5B4736C4E175CEFFC7320C47FB4FB17 /* SGQRCodeObtainConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SGQRCodeObtainConfigure.m; path = SGQRCode/SGQRCodeObtainConfigure.m; sourceTree = "<group>"; };
+		F79975FDB5B488FCC60E6ECF070ABC49 /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSVProgressHUD.a; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A5D2447C7538A09E10F2858E7A169F /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = UShareSDK/SocialLibraries/WeChat/WechatSDK/WechatAuthSDK.h; sourceTree = "<group>"; };
+		FE01BB4559A0FC17426CBEEE1353DD11 /* QRCodeBottomLeft@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "QRCodeBottomLeft@2x.png"; path = "QRCodeReaderViewController/Resources/QRCodeBottomLeft@2x.png"; sourceTree = "<group>"; };
+		FE8B937100A9929AAD5A68673AA8D744 /* Pods-FangZhiAPP-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FangZhiAPP-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		061EBAE262B43C231ED489B3CA8E35FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF9A99CD27A80FCD1C026AA64617A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E0E54D1C7716F8278D00C698F0C2295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		857E8D3EA79279D0D7A33F1BFB331061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA394D9A9193AB2BFB5C92FEADF4E9BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E486D2E92DF1145F04BC0A764EEEABED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0025214D76F28D8620EF3737A3059E13 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EBD3B15C2B0ABC850F0CDB70A9097FC8 /* SVIndefiniteAnimatedView.h */,
+				8997922F8F0DE3E6CBB48A3FFC7DC293 /* SVIndefiniteAnimatedView.m */,
+				532E6392E647A07EFA387543A7D2BC08 /* SVProgressAnimatedView.h */,
+				B989F403B6FBC700B5FC89699A97DA1A /* SVProgressAnimatedView.m */,
+				0A1EEC4A9B72E9CBFBB74D153EF8C4F1 /* SVProgressHUD.h */,
+				4E10A2080EEB8F0EFEF0963465033005 /* SVProgressHUD.m */,
+				C6727192B97B7A7BBD779BBDD267F10B /* SVRadialGradientLayer.h */,
+				8BDCA08D4C9F2F1E336FE16EF13A4955 /* SVRadialGradientLayer.m */,
+				99369D433DE9DAA1E985AD981F178726 /* Resources */,
+				DD0CAFA8FB99A151C7F349B9B6ADED40 /* Support Files */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		00F1C5E5D1C10A9F967FFED1BAF8AEBF /* UMCCommon */ = {
+			isa = PBXGroup;
+			children = (
+				18A83B460FA0A04EB40329DB2A9A9D13 /* Frameworks */,
+				2F13955EBA7F161C8EDE320585F6BD32 /* Support Files */,
+			);
+			name = UMCCommon;
+			path = UMCCommon;
+			sourceTree = "<group>";
+		};
+		07585806D6A56963A879356F20B3333C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCC449CBFAD20F75911075CE9ADF7346 /* libSocialOfficialWeChat.a */,
+				4074DDC2F21400C8E68C4E8496303F22 /* libWeChatSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		115C3C357C2D4570D1E9AF0D3FEBF72C /* ReducedQQ */ = {
+			isa = PBXGroup;
+			children = (
+				A350355CE680007722FDF0A0C51D0D92 /* UMSocialQQHandler.h */,
+				EC2B5A5817DC4BD597732F128F722DC9 /* Frameworks */,
+			);
+			name = ReducedQQ;
+			sourceTree = "<group>";
+		};
+		122892906F98128542D0D4B5B92084B2 /* Pods-FangZhiAPP */ = {
+			isa = PBXGroup;
+			children = (
+				C76D93870C948B827B3876419590B5F8 /* Pods-FangZhiAPP-acknowledgements.markdown */,
+				219712E464C4A16FEEF1F6DB5C1463ED /* Pods-FangZhiAPP-acknowledgements.plist */,
+				604917894DD1F6D0E9D2CBAA827D75CA /* Pods-FangZhiAPP-dummy.m */,
+				FE8B937100A9929AAD5A68673AA8D744 /* Pods-FangZhiAPP-resources.sh */,
+				0720434C0836EFF9AA22F2FDBD0306F5 /* Pods-FangZhiAPP.debug.xcconfig */,
+				0B9842CAC8DB2FEB3264C714AD3B582E /* Pods-FangZhiAPP.release.xcconfig */,
+			);
+			name = "Pods-FangZhiAPP";
+			path = "Target Support Files/Pods-FangZhiAPP";
+			sourceTree = "<group>";
+		};
+		1236D5217A6A9A313B83EA26BDD5B3D7 /* SGQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				43B2F33244780F55D1359B3DE72CF2E6 /* SGQRCode.h */,
+				5C5FF46DF629263A532C31319B423C8D /* SGQRCodeObtain.h */,
+				E232661DABFC10637D888F963F7800B5 /* SGQRCodeObtain.m */,
+				A82B87FF483828E5A5CED81FAE7D09D0 /* SGQRCodeObtainConfigure.h */,
+				F5B4736C4E175CEFFC7320C47FB4FB17 /* SGQRCodeObtainConfigure.m */,
+				5AB7A856A6337AB2DAD12D9BAFBD5532 /* SGQRCodeScanView.h */,
+				58747315A191BC0372E6E9F8ED793E4A /* SGQRCodeScanView.m */,
+				5086AC649E1243F4E013EAC360468A2E /* Resources */,
+				9C396D995CAB56669A9D6C28B323E1FD /* Support Files */,
+			);
+			name = SGQRCode;
+			path = SGQRCode;
+			sourceTree = "<group>";
+		};
+		18A83B460FA0A04EB40329DB2A9A9D13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A74DF8FDD153B9194F218C8590F4E2 /* UMCommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AB5147261EE771611C44295DD3FBACC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EC2CF95FB3D5C06D7D52CCAA231152B /* UMSocialSDKPromptResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1B7798C9C92FA30E0CAB3143EFFFFE3A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D8B90EC2B6BC163B6A0280E2FD7E0 /* Frameworks */,
+				1AB5147261EE771611C44295DD3FBACC /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		1D8335FAABA9EA7E5E951E5FBAE64079 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				926E12F74FB3A33B3E57BF81EC06896C /* UMSocialSDKResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1F6D8B90EC2B6BC163B6A0280E2FD7E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				722ACF2097E3C85D4587A208B9B35DB1 /* libUMSocialLog.a */,
+				5840E360E224A099AD82CC250D943D04 /* UMSocialCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AAB493892B47D5F4C7E6841796C5BF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE01BB4559A0FC17426CBEEE1353DD11 /* QRCodeBottomLeft@2x.png */,
+				7424F51DCA1649842488349BE96DCD2D /* QRCodeBottomLeft@3x.png */,
+				2C341867E6C9BEE0C97928B595D9F65D /* QRCodeBottomRight@2x.png */,
+				30B51D68AA5E100F89422A6771240311 /* QRCodeBottomRight@3x.png */,
+				9888527F1BCA1C79250C2D2B7D6B29D8 /* QRCodeLine@2x.png */,
+				B92E1426FB4D9637F36D829DBEEBBFD5 /* QRCodeLine@3x.png */,
+				5EF92CB428A18BBB5B02BBA1B40E0419 /* QRCodeTopLeft@2x.png */,
+				E115B18D622535FE45D5A194452215F4 /* QRCodeTopLeft@3x.png */,
+				3608D71BCC1ADE75B844CA45CCC81F29 /* QRCodeTopRight@2x.png */,
+				2238FA3A369448E7373D732AB0512D89 /* QRCodeTopRight@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2F13955EBA7F161C8EDE320585F6BD32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B0FABD4F481269B5FDC20DA5E0E8DA4 /* UMCCommon.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCCommon";
+			sourceTree = "<group>";
+		};
+		2FCB024AA146C683B7F09E7F0E8AB4A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDEC4FF59AD47BCBBC67DA76F7C65160 /* QRCodeReaderViewController.xcconfig */,
+				666DE6D2A10FCE7E8C9641D1FAA88F9E /* QRCodeReaderViewController-dummy.m */,
+				C62ED6AC966230E3161759B79BB2F7FB /* QRCodeReaderViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QRCodeReaderViewController";
+			sourceTree = "<group>";
+		};
+		3DF7FEB3C3BA49EE4EB4F38043FE154D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0507CEC48E126433CEDDA74857AEE31 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		41F18684B17D3D39A5B060A9D78504D8 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5D2447C7538A09E10F2858E7A169F /* WechatAuthSDK.h */,
+				4AE86EBBCD2F7D1354623874AF3E91CD /* WXApi.h */,
+				6C66C2EC72148F51DB846D7241F67335 /* WXApiObject.h */,
+				07585806D6A56963A879356F20B3333C /* Frameworks */,
+			);
+			name = WeChat;
+			sourceTree = "<group>";
+		};
+		47BC71C08E259EB93761674884E2BD2F /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				577A6B708224DA93608198C0664FB796 /* MJExtension.h */,
+				016DF862460825200AEF9FF8379C78F9 /* MJExtensionConst.h */,
+				4F6FD8B132A1FE72B1998345DBAD4C45 /* MJExtensionConst.m */,
+				B01D43941E4CAB694072CA17D9F00352 /* MJFoundation.h */,
+				E40CF25AF52F4461EA3AC3AEACB92397 /* MJFoundation.m */,
+				EE2F3F745BE78F8778719058C071148E /* MJProperty.h */,
+				5004A867E39B15BA3970342FF46F4454 /* MJProperty.m */,
+				159F6C5D291A6AFD290690B5537045FB /* MJPropertyKey.h */,
+				27553E82B7CB03C366649FC52DA6E4B7 /* MJPropertyKey.m */,
+				B91AC30DBDE1124A69B26F1955744B8F /* MJPropertyType.h */,
+				35602B36602489A50D1B1918EC9C8493 /* MJPropertyType.m */,
+				B85C5ED4697BE22F1CBB7CEEF1764469 /* NSObject+MJClass.h */,
+				D28907516FC4C1FD769D59D2F24F71CD /* NSObject+MJClass.m */,
+				AADAD1DC38B391EDC7EF0938DDD18519 /* NSObject+MJCoding.h */,
+				6BCE5971B8CE68105AA2C54F127A58CD /* NSObject+MJCoding.m */,
+				3D2E7388AADCA0494C32C69AA7DD9550 /* NSObject+MJKeyValue.h */,
+				3D189E64A82A73959F70AA000F1EE003 /* NSObject+MJKeyValue.m */,
+				A2E142A2DD964E9A060BC8839299C520 /* NSObject+MJProperty.h */,
+				A04C206FC015E638F94EA922D6219749 /* NSObject+MJProperty.m */,
+				93D827DECE6C0706B7929E303ECF1D38 /* NSString+MJExtension.h */,
+				7E50D7AE510E8BBF1FD8031605286DE1 /* NSString+MJExtension.m */,
+				855B31EDA9F14E3D170450CA97E290C8 /* Support Files */,
+			);
+			name = MJExtension;
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		49602F9190DA0E7F18BB913C13E5E11F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4875517B3EB1A4FA13AB98103187F002 /* TencentOpenAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B8EA829ADEB4512FC459FE27AF635B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA0004A5A388F33CB52AE4255D526773 /* MJRefresh.xcconfig */,
+				BF3FFC1F0AAC6CDDDDB21D2571D31DD6 /* MJRefresh-dummy.m */,
+				8E690E9841459C2DD1E5BC824319D10D /* MJRefresh-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJRefresh";
+			sourceTree = "<group>";
+		};
+		4C719ABA2B9DD8E60693C49C5EAB6631 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47BC71C08E259EB93761674884E2BD2F /* MJExtension */,
+				EAA97421E803D736F8531470FB1FF439 /* MJRefresh */,
+				F380AAFF797910EF6EF3942ED6C1436B /* QRCodeReaderViewController */,
+				1236D5217A6A9A313B83EA26BDD5B3D7 /* SGQRCode */,
+				0025214D76F28D8620EF3737A3059E13 /* SVProgressHUD */,
+				AE73896C44B94FB3DE5184533CC79D44 /* UMCAnalytics */,
+				00F1C5E5D1C10A9F967FFED1BAF8AEBF /* UMCCommon */,
+				9DA4D9913D517A688EDD1ADBA262306E /* UMCErrorCatch */,
+				8E7E35D87B350F6508B751F9ED4C8757 /* UMCSecurityPlugins */,
+				6A3B4723142D78AF8C91C14826EAD4F5 /* UMengUShare */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5086AC649E1243F4E013EAC360468A2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				031B81768206A3C9B6E4D6C1FC9ACD71 /* SGQRCode.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5522B56147BDBA14D53179C09B72C96C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F7D5B16819DE0FACAC76317EAB6B3F6 /* libMJExtension.a */,
+				BFD51E79E38E3864ACCD03C4E76D8A19 /* libMJRefresh.a */,
+				D5910258010FAE5C7ACB0DB31FDF84A3 /* libPods-FangZhiAPP.a */,
+				7F7DD84F2E00BECE87BDC3D9320009C2 /* libQRCodeReaderViewController.a */,
+				B4F4F178B14D103B1AAC9A23D021D869 /* libSGQRCode.a */,
+				F79975FDB5B488FCC60E6ECF070ABC49 /* libSVProgressHUD.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5625C483826A921EFB8B61F245E373FF /* ReducedWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0382CE4504A4ABD8F3E5549E81D87 /* UMSocialWechatHandler.h */,
+				E82C015155D0C35197E15288218EA7C7 /* Frameworks */,
+			);
+			name = ReducedWeChat;
+			sourceTree = "<group>";
+		};
+		6019D049A2D5DC6D45A8E390D293054F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7197179728108C68D55C2A8AA6BD2095 /* UShareUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66BFAF43FFED2DEFF01AEB562752F6F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4723CA1833BE10D6847B4A59E1107DE8 /* SecurityEnvSDK.framework */,
+				9DEC718B976C0C25CACDC15B10EE12D2 /* UTDID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A3B4723142D78AF8C91C14826EAD4F5 /* UMengUShare */ = {
+			isa = PBXGroup;
+			children = (
+				1B7798C9C92FA30E0CAB3143EFFFFE3A /* Core */,
+				6BDA2CDB258AA7D9C337503261DF4042 /* Network */,
+				91766D18385BA724F1FE2575BDFD9EF1 /* Social */,
+				EAAE95609A9D01BD0BF63569642CFC85 /* Support Files */,
+				C0CF02A0FAE6885EF92DECF9D45E0412 /* UI */,
+			);
+			name = UMengUShare;
+			path = UMengUShare;
+			sourceTree = "<group>";
+		};
+		6BDA2CDB258AA7D9C337503261DF4042 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7B8B84B3556E4CB0815F839BD35B9 /* Frameworks */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		7346529FD6D54DAD4F451AA5003E7DA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BEB64C0CEDC70AF7D35827C54D3E1 /* UMAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		855B31EDA9F14E3D170450CA97E290C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4B86BBEF1689424D5C3CCDE8F67353F /* MJExtension.xcconfig */,
+				6D8A7A1EB724E2A9EBA41EC46D923BFA /* MJExtension-dummy.m */,
+				791D3D4B8E7387C0C00ACDF8EB2E4F12 /* MJExtension-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJExtension";
+			sourceTree = "<group>";
+		};
+		89E3ED703E0DA56CD5572CD9126C7A23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFDB02DD445960D6FEC782665BE8A31E /* UMErrorCatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E7E35D87B350F6508B751F9ED4C8757 /* UMCSecurityPlugins */ = {
+			isa = PBXGroup;
+			children = (
+				66BFAF43FFED2DEFF01AEB562752F6F5 /* Frameworks */,
+				A8F5DA8A3DB5EF32AF3C7823B5E15B11 /* Support Files */,
+			);
+			name = UMCSecurityPlugins;
+			path = UMCSecurityPlugins;
+			sourceTree = "<group>";
+		};
+		91766D18385BA724F1FE2575BDFD9EF1 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				93635D0EFCAAE50B60715DF21D667502 /* QQ */,
+				115C3C357C2D4570D1E9AF0D3FEBF72C /* ReducedQQ */,
+				B3FD48142113D14F1F4570E46353076A /* ReducedSina */,
+				5625C483826A921EFB8B61F245E373FF /* ReducedWeChat */,
+				C81336DCB0984A3131DB0D278B4E9A7C /* Sina */,
+				41F18684B17D3D39A5B060A9D78504D8 /* WeChat */,
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		93635D0EFCAAE50B60715DF21D667502 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				49602F9190DA0E7F18BB913C13E5E11F /* Frameworks */,
+				3DF7FEB3C3BA49EE4EB4F38043FE154D /* Resources */,
+			);
+			name = QQ;
+			sourceTree = "<group>";
+		};
+		9764CB2038757BD07B3876B98FC7D837 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A538CE36BA17DFF080FA1D4D70C2DBA4 /* UMCErrorCatch.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCErrorCatch";
+			sourceTree = "<group>";
+		};
+		99369D433DE9DAA1E985AD981F178726 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				592E63E58572AE1A57088B54A9A76CA1 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C396D995CAB56669A9D6C28B323E1FD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D2F1ADDEC8AA746DA90E2FD568CF59 /* SGQRCode.xcconfig */,
+				49ABBBCC633CAFAC7853F0AE26752FF4 /* SGQRCode-dummy.m */,
+				04DC72C5D3CA97E908393579DA18DFB9 /* SGQRCode-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SGQRCode";
+			sourceTree = "<group>";
+		};
+		9DA4D9913D517A688EDD1ADBA262306E /* UMCErrorCatch */ = {
+			isa = PBXGroup;
+			children = (
+				89E3ED703E0DA56CD5572CD9126C7A23 /* Frameworks */,
+				9764CB2038757BD07B3876B98FC7D837 /* Support Files */,
+			);
+			name = UMCErrorCatch;
+			path = UMCErrorCatch;
+			sourceTree = "<group>";
+		};
+		A8F5DA8A3DB5EF32AF3C7823B5E15B11 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0473DE8BA657F7ED82E7ACC0BA932E3D /* UMCSecurityPlugins.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCSecurityPlugins";
+			sourceTree = "<group>";
+		};
+		AE73896C44B94FB3DE5184533CC79D44 /* UMCAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				7346529FD6D54DAD4F451AA5003E7DA0 /* Frameworks */,
+				D447C8DB8E4022F0364DBBCD38F9F537 /* Support Files */,
+			);
+			name = UMCAnalytics;
+			path = UMCAnalytics;
+			sourceTree = "<group>";
+		};
+		B2E7B8B84B3556E4CB0815F839BD35B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD6D9ABF156E125B99A387CDE0C616F2 /* UMSocialNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3FD48142113D14F1F4570E46353076A /* ReducedSina */ = {
+			isa = PBXGroup;
+			children = (
+				96DF8ECB90AF7C7CAA206F41A41FB0FC /* UMSocialSinaHandler.h */,
+				D50470C35A8E21BE9AE7B75378FAA007 /* Frameworks */,
+			);
+			name = ReducedSina;
+			sourceTree = "<group>";
+		};
+		B4DBDCB79A65A9D0E915289C28C2BE95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F9E1A69E2FD05DE4817DC9958093ABF /* libWeiboSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0CF02A0FAE6885EF92DECF9D45E0412 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6019D049A2D5DC6D45A8E390D293054F /* Frameworks */,
+				1D8335FAABA9EA7E5E951E5FBAE64079 /* Resources */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		C1ABF5D5A6C240C03594BB8245E327DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2ACB44D7F447C109FF34011052D0C3C7 /* WeiboSDK.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C81336DCB0984A3131DB0D278B4E9A7C /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				1425B68CE5CD06A576A7C3C0EB4F3937 /* WBHttpRequest.h */,
+				8C52ED85EE140DC0BFFCD7134E7EA4A2 /* WBHttpRequest+WeiboToken.h */,
+				4E8EC3D55D7D86D9DED07D204EB8B8E7 /* WeiboSDK.h */,
+				2AA6B69CE122140E30C7D82BCC8CB409 /* WeiboSDK+Statistics.h */,
+				B4DBDCB79A65A9D0E915289C28C2BE95 /* Frameworks */,
+				C1ABF5D5A6C240C03594BB8245E327DA /* Resources */,
+			);
+			name = Sina;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				4C719ABA2B9DD8E60693C49C5EAB6631 /* Pods */,
+				5522B56147BDBA14D53179C09B72C96C /* Products */,
+				FAFB205C1AB0159AF73E8C2D2074B527 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D447C8DB8E4022F0364DBBCD38F9F537 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E37FF532C7F813CEEADEF8B86B2AD3C4 /* UMCAnalytics.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCAnalytics";
+			sourceTree = "<group>";
+		};
+		D50470C35A8E21BE9AE7B75378FAA007 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7F4DF9412D9B363901FAD170BD6DD82 /* libSocialSina.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD0CAFA8FB99A151C7F349B9B6ADED40 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				06BF723F41FD63947703DC92C478B2A2 /* SVProgressHUD.xcconfig */,
+				9C8A59EAFD3CB20CB9740F0AFC17E48C /* SVProgressHUD-dummy.m */,
+				21C64230C3EB0E69ACCAD112DE0CB394 /* SVProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		E82C015155D0C35197E15288218EA7C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD0D7881D8C8319674626B3768843CD8 /* libSocialWeChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9F0BC31794F954963398342DF67EE51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6B73AD88FCD45660500340C2248576D /* MJRefresh.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EAA97421E803D736F8531470FB1FF439 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				A8E8FA3DE8AA5B8BE8CC00E1A116DBE7 /* MJRefresh.h */,
+				86A78D15F843865BD16ECF81A152C0E6 /* MJRefreshAutoFooter.h */,
+				0A09C2DF542FC12557D231FFDF66CB3A /* MJRefreshAutoFooter.m */,
+				0FAAF2FB11135AF85F4EB1DB80ABF1C4 /* MJRefreshAutoGifFooter.h */,
+				E17333423A961D659220CE1EA3247BC8 /* MJRefreshAutoGifFooter.m */,
+				B5EAA15DFA0BF720DAA3DACA2C3DE06C /* MJRefreshAutoNormalFooter.h */,
+				BB9DF2EA7070711DD942FA97200B2145 /* MJRefreshAutoNormalFooter.m */,
+				7DCD35EDA91BBBEEA2EDD2EAFFA920BB /* MJRefreshAutoStateFooter.h */,
+				8A0174C871711F6826E4A08D9CC6C1E6 /* MJRefreshAutoStateFooter.m */,
+				26EAB232D46A66EED339353166758D0E /* MJRefreshBackFooter.h */,
+				76B4A2637B5F5359CC02FA394DE6E88E /* MJRefreshBackFooter.m */,
+				F53F192665B4C26CC53C916A0ACD718C /* MJRefreshBackGifFooter.h */,
+				7C673D0F57D7CA7C76DF9B05A582D940 /* MJRefreshBackGifFooter.m */,
+				307AF9D8FAC12673E921B8B4B1EB280E /* MJRefreshBackNormalFooter.h */,
+				6E9F29E957DE7FD31CBB1D6DC9BC694F /* MJRefreshBackNormalFooter.m */,
+				3A14C3DB86B01275F79D48CE59F672DE /* MJRefreshBackStateFooter.h */,
+				8BBA158F4CD8083A36B8B095AEFD9B45 /* MJRefreshBackStateFooter.m */,
+				D87371A73F5DDA50275965B67DDC88E7 /* MJRefreshComponent.h */,
+				5387D06C21E62CC04DF680C5577B2846 /* MJRefreshComponent.m */,
+				76159D9624939E2705C69E680024990A /* MJRefreshConfig.h */,
+				3F3143720E0C9B045C491BF707942812 /* MJRefreshConfig.m */,
+				0710DC28E06F551036E148B7C11A2762 /* MJRefreshConst.h */,
+				C4A578ABD417FFC97A0969CBB97E2A76 /* MJRefreshConst.m */,
+				AC8F6E2EDAB83CE2B111FD7A12DA96DB /* MJRefreshFooter.h */,
+				160E4BC30A96A9CF3997441047A7099C /* MJRefreshFooter.m */,
+				37D83FA1F1ABA2631FE6B48E69C28DD9 /* MJRefreshGifHeader.h */,
+				BA72CAD163BBC2452562849A0281DA70 /* MJRefreshGifHeader.m */,
+				869E6CE7861A2AA76A509A8FCC6F3149 /* MJRefreshHeader.h */,
+				688A33756D91CD45E185B18E7A6B15BD /* MJRefreshHeader.m */,
+				7DBBCEBA1194B33376328A4A7F6D0DCB /* MJRefreshNormalHeader.h */,
+				AB66B755542BF5BEBCD432DE8DC62971 /* MJRefreshNormalHeader.m */,
+				214444F56C643574807080284A12F126 /* MJRefreshStateHeader.h */,
+				655B506CA610ED0260F11D2EDB25660C /* MJRefreshStateHeader.m */,
+				1D32A2DF6EBEED4B41B6C58C8C60056D /* NSBundle+MJRefresh.h */,
+				ECFFEF1F6CB2838BF000B510C137F791 /* NSBundle+MJRefresh.m */,
+				9892C3FB5758FA7B8DD2944A24A24D6D /* UIScrollView+MJExtension.h */,
+				74DFD29C33F8558E2D2D403DAFB43134 /* UIScrollView+MJExtension.m */,
+				033FE131B1DF876756C464CB3E7B2E3D /* UIScrollView+MJRefresh.h */,
+				33BCBD9C69B457A62201B06E2353687B /* UIScrollView+MJRefresh.m */,
+				A14789B9F5D969CD7BBF14448BA9F57F /* UIView+MJExtension.h */,
+				98235140872DBB1FE87E29E5D0806BC3 /* UIView+MJExtension.m */,
+				E9F0BC31794F954963398342DF67EE51 /* Resources */,
+				4B8EA829ADEB4512FC459FE27AF635B7 /* Support Files */,
+			);
+			name = MJRefresh;
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		EAAE95609A9D01BD0BF63569642CFC85 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13CEA1C8B0001C55F60E6D124C8EAFFF /* UMengUShare.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMengUShare";
+			sourceTree = "<group>";
+		};
+		EC2B5A5817DC4BD597732F128F722DC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				073C64F31007EAFBC980F867347E5EDF /* libSocialQQ.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F380AAFF797910EF6EF3942ED6C1436B /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5347F34EBB29CE1222E3E4A2B66A0EE1 /* QRCameraSwitchButton.h */,
+				43818DEFE418E77F4FB1135EAD83977C /* QRCameraSwitchButton.m */,
+				745B5268BB154472608E17239CE8F9ED /* QRCodeReader.h */,
+				1156F9EDACF7AA0FF810AC5240744233 /* QRCodeReader.m */,
+				671CD9951008C5F51822398AD83300DB /* QRCodeReaderAanimationLineView.h */,
+				1DE384ECDBFBA2788BBEAECC982E9AF8 /* QRCodeReaderAanimationLineView.m */,
+				B9CC596BD2F55F8AD9CACFA468528290 /* QRCodeReaderDelegate.h */,
+				080D9B6B1E6FF408F6F344FDDCDEA46D /* QRCodeReaderMaskView.h */,
+				29989E6C31136DF236D6D3791863AFEF /* QRCodeReaderMaskView.m */,
+				F16C7D7132231378CD27A8A3361A03C7 /* QRCodeReaderView.h */,
+				3787F57AE7D05A346D01D4C09E4D0720 /* QRCodeReaderView.m */,
+				7EEA51367FBDFEBC89F14E38300F2F3E /* QRCodeReaderViewController.h */,
+				3946FE54F553EAF20B4765EE4B0BD4D9 /* QRCodeReaderViewController.m */,
+				2AAB493892B47D5F4C7E6841796C5BF8 /* Resources */,
+				2FCB024AA146C683B7F09E7F0E8AB4A5 /* Support Files */,
+			);
+			name = QRCodeReaderViewController;
+			path = QRCodeReaderViewController;
+			sourceTree = "<group>";
+		};
+		FAFB205C1AB0159AF73E8C2D2074B527 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				122892906F98128542D0D4B5B92084B2 /* Pods-FangZhiAPP */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		292A7AD784405069FDD5C7395EF7401D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D6A74E9209DB5C6F2CCE917381E3F0 /* SGQRCode.h in Headers */,
+				34960A613CDDE2452DD1FAE0F90A83BD /* SGQRCodeObtain.h in Headers */,
+				38D7CD3CED44A3831DAFDD092C1EC7E3 /* SGQRCodeObtainConfigure.h in Headers */,
+				AF4E787479876DA6F5BA9461B20319CA /* SGQRCodeScanView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		329E21D318000CD5039B2A9B1EA932C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146D7BA20463FE68B3E6AD5DF2AE94B1 /* SVIndefiniteAnimatedView.h in Headers */,
+				4A75E3924BA01521FBD94FFCC9B156F7 /* SVProgressAnimatedView.h in Headers */,
+				C412682CD95AE1E35211C6AF76B338D1 /* SVProgressHUD.h in Headers */,
+				5EFCE3469BEEEB5DB4755A99FF122B37 /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97BE96D4575E3E169DA89244DB88F3B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB2755590C1381239B919564D7CD061 /* MJRefresh.h in Headers */,
+				4DFE545EA07FBD786872CBE37C8CE886 /* MJRefreshAutoFooter.h in Headers */,
+				9F29A2C79A3A3BD306183C7087963C66 /* MJRefreshAutoGifFooter.h in Headers */,
+				9ABEC337A4B11CD78FE53B7A02F2944C /* MJRefreshAutoNormalFooter.h in Headers */,
+				6BD922ACFD8A6F139A8C6DCCA5198E8F /* MJRefreshAutoStateFooter.h in Headers */,
+				41C7FE6088565F5A722F9D439DB968D7 /* MJRefreshBackFooter.h in Headers */,
+				ECCB898E997FAC6AAE9DB13E54E9881E /* MJRefreshBackGifFooter.h in Headers */,
+				ED6208254906D192A1AF1F835A96BCD6 /* MJRefreshBackNormalFooter.h in Headers */,
+				89EDEFF292953DCFB91FBC82611B006A /* MJRefreshBackStateFooter.h in Headers */,
+				92CFA868869DEC409C9B583990AD8D80 /* MJRefreshComponent.h in Headers */,
+				B4D9E769E8BB098B8C5FCF0A1E20B474 /* MJRefreshConfig.h in Headers */,
+				A3A33ABA15937783434DA79B22FCC2CE /* MJRefreshConst.h in Headers */,
+				F031041A4719E9B94B10C385665EF0E9 /* MJRefreshFooter.h in Headers */,
+				59C2C0569D4E092CA12DFCA3D6401DD4 /* MJRefreshGifHeader.h in Headers */,
+				4868E4CFB1801C5AB423C480EAEF88DD /* MJRefreshHeader.h in Headers */,
+				DE8CF3F842F08C11098B8369BBAA2FD2 /* MJRefreshNormalHeader.h in Headers */,
+				3BBB61E48C6423A5DED878C2C32B581C /* MJRefreshStateHeader.h in Headers */,
+				6EFFDF24BD3102E15C771845B5183B3D /* NSBundle+MJRefresh.h in Headers */,
+				E0303DD2BF4E3C0615538C90905F515C /* UIScrollView+MJExtension.h in Headers */,
+				B2B45B29C6F7378527E37F384A2972A0 /* UIScrollView+MJRefresh.h in Headers */,
+				AA9551584A28E2836421BCB243FEF21B /* UIView+MJExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BBC206F679EC3153E97108F982FE79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC20DE450EDFBF8B2E9157DB8226C4C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C3F7EE69D6BE1B98A0D2105D41EA3C5 /* QRCameraSwitchButton.h in Headers */,
+				7D7F785DB467EBE40294F93CA5F51E3B /* QRCodeReader.h in Headers */,
+				DAB809B8400577F9001EB624177C0C86 /* QRCodeReaderAanimationLineView.h in Headers */,
+				21474CB2DB5DD2A7007C67AD16CB433A /* QRCodeReaderDelegate.h in Headers */,
+				D5C12AFB769D9700D137A1688FB81B3D /* QRCodeReaderMaskView.h in Headers */,
+				60B5A8B1DA52908D0136423E30CC7B15 /* QRCodeReaderView.h in Headers */,
+				AFE25C0E393730522E21BF7F311D0581 /* QRCodeReaderViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B951F18167330E2C2F8E97F81B15F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4306188C9FC14FDD13E9C42DB56C138 /* MJExtension.h in Headers */,
+				41604A733861D95E0C68379A15FFC461 /* MJExtensionConst.h in Headers */,
+				244D4C7C591D88D04E5C6A5E4D7B6B84 /* MJFoundation.h in Headers */,
+				E2A06742F01B43B904C79B0187F2A7FD /* MJProperty.h in Headers */,
+				137D69B65677A5FFAAAABE2B5C30E5DC /* MJPropertyKey.h in Headers */,
+				C8098D09919C451D45CA7207EE2B5A9E /* MJPropertyType.h in Headers */,
+				041AAA89FA52A8486415533C4EAEE6D8 /* NSObject+MJClass.h in Headers */,
+				ED5879067A61148ACD844C8F945A434E /* NSObject+MJCoding.h in Headers */,
+				1E9813FE8319518E9671984E47B4612D /* NSObject+MJKeyValue.h in Headers */,
+				3106FEF39E850CF8B8395383D564496D /* NSObject+MJProperty.h in Headers */,
+				53673BA19B4715F1628B8BD220DCD86B /* NSString+MJExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36A6937C0B0BAE7CACB845B79808F293 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				329E21D318000CD5039B2A9B1EA932C2 /* Headers */,
+				994AB4A78A28BD478EEE6A8145F25644 /* Sources */,
+				061EBAE262B43C231ED489B3CA8E35FE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = F79975FDB5B488FCC60E6ECF070ABC49 /* libSVProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2035A387A5D5D85BEF7F693731454A3D /* SGQRCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9412E813528B8C541FD280043CCBFB89 /* Build configuration list for PBXNativeTarget "SGQRCode" */;
+			buildPhases = (
+				292A7AD784405069FDD5C7395EF7401D /* Headers */,
+				4A380BD164429B8C299EF65A9880E5F7 /* Sources */,
+				E486D2E92DF1145F04BC0A764EEEABED /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGQRCode;
+			productName = SGQRCode;
+			productReference = B4F4F178B14D103B1AAC9A23D021D869 /* libSGQRCode.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		25EA758B2A50CD1E3B8403DC8B451135 /* Pods-FangZhiAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7314C7E2611A208378169A60F43FCF04 /* Build configuration list for PBXNativeTarget "Pods-FangZhiAPP" */;
+			buildPhases = (
+				C8BBC206F679EC3153E97108F982FE79 /* Headers */,
+				1AD8115430F5773140AD5C45F263E51E /* Sources */,
+				1BF9A99CD27A80FCD1C026AA64617A37 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4E9EC188E8530451683B0633D4E6457 /* PBXTargetDependency */,
+				8BE17B540B74580EC2C46A5F8DECFD85 /* PBXTargetDependency */,
+				60E1CF73020B7B48CBAD8B5E47E7C014 /* PBXTargetDependency */,
+				FC7FBA2691A1ECAD3C842C1D7CA5C77B /* PBXTargetDependency */,
+				2B2A6DF3B9C7C9BB20F43F095B7E880D /* PBXTargetDependency */,
+				2EA1C1C944974B247783630840E2E79A /* PBXTargetDependency */,
+				FBC46732E52ED9F472B92C49CAF71385 /* PBXTargetDependency */,
+				8AF4DDC7529295017C98D4354597CDFD /* PBXTargetDependency */,
+				51DDFA3A00CEAB93CC299420FEE083CF /* PBXTargetDependency */,
+				E826B5DA48D12046E86B3B0486724FAC /* PBXTargetDependency */,
+			);
+			name = "Pods-FangZhiAPP";
+			productName = "Pods-FangZhiAPP";
+			productReference = D5910258010FAE5C7ACB0DB31FDF84A3 /* libPods-FangZhiAPP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31EB4E584F1521766C849E763982B8A0 /* Build configuration list for PBXNativeTarget "MJExtension" */;
+			buildPhases = (
+				E5B951F18167330E2C2F8E97F81B15F6 /* Headers */,
+				F1B2A5EFAD7E39FEEF676AEB98E1DB2A /* Sources */,
+				2E0E54D1C7716F8278D00C698F0C2295 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJExtension;
+			productName = MJExtension;
+			productReference = 3F7D5B16819DE0FACAC76317EAB6B3F6 /* libMJExtension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6868056D761E163D10FDAF8CF1C4D9B8 /* MJRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 948AFFFDD304B359F7F30908A10C002F /* Build configuration list for PBXNativeTarget "MJRefresh" */;
+			buildPhases = (
+				97BE96D4575E3E169DA89244DB88F3B3 /* Headers */,
+				9559744ADED40FD752706C6587755513 /* Sources */,
+				857E8D3EA79279D0D7A33F1BFB331061 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJRefresh;
+			productName = MJRefresh;
+			productReference = BFD51E79E38E3864ACCD03C4E76D8A19 /* libMJRefresh.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C8FC4FD750AC24CAD841A7FB89CA76C6 /* QRCodeReaderViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9DB7EE9739FE43BA2E6F1B5C2CA0980 /* Build configuration list for PBXNativeTarget "QRCodeReaderViewController" */;
+			buildPhases = (
+				CBC20DE450EDFBF8B2E9157DB8226C4C /* Headers */,
+				9C32700A1F89002B38A57E95436C1DD3 /* Sources */,
+				BA394D9A9193AB2BFB5C92FEADF4E9BD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRCodeReaderViewController;
+			productName = QRCodeReaderViewController;
+			productReference = 7F7DD84F2E00BECE87BDC3D9320009C2 /* libQRCodeReaderViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5522B56147BDBA14D53179C09B72C96C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */,
+				6868056D761E163D10FDAF8CF1C4D9B8 /* MJRefresh */,
+				25EA758B2A50CD1E3B8403DC8B451135 /* Pods-FangZhiAPP */,
+				C8FC4FD750AC24CAD841A7FB89CA76C6 /* QRCodeReaderViewController */,
+				2035A387A5D5D85BEF7F693731454A3D /* SGQRCode */,
+				1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */,
+				FD2E8643412994484A50DA7D3BFB1EFC /* UMCAnalytics */,
+				6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */,
+				59CEE9D6F6016BD1B1C9DB3F7774066F /* UMCErrorCatch */,
+				8B5BB4D9C85FBB3B774B6C624239821A /* UMCSecurityPlugins */,
+				E61FA54B27DC950F09491A8994516EA6 /* UMengUShare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AD8115430F5773140AD5C45F263E51E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FFACC2C490D178AA9D812F979D97EBC /* Pods-FangZhiAPP-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A380BD164429B8C299EF65A9880E5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95E622E7BFAB8AA6062C835F0BAD86FA /* SGQRCode-dummy.m in Sources */,
+				0B0C38C60AEB46F41A16600E38A48547 /* SGQRCodeObtain.m in Sources */,
+				D9273213F5699BF4C3D42AE82056A7A5 /* SGQRCodeObtainConfigure.m in Sources */,
+				E131C9D49378BDA0D63CE549C4A5B29D /* SGQRCodeScanView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9559744ADED40FD752706C6587755513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24BC95804921190B22F5145F6069A348 /* MJRefresh-dummy.m in Sources */,
+				76839E1C0ECC33D279E4340839B7DE87 /* MJRefreshAutoFooter.m in Sources */,
+				31FADEC93AE54F48E6EBD9FE820783D5 /* MJRefreshAutoGifFooter.m in Sources */,
+				649DA0884E358886ACB21F18AD13FA60 /* MJRefreshAutoNormalFooter.m in Sources */,
+				F2F1CE67A7F7055FBD76E2692A053BAE /* MJRefreshAutoStateFooter.m in Sources */,
+				1A57AEF4817CA757E4043EA1C1FC70C2 /* MJRefreshBackFooter.m in Sources */,
+				82B56BD11BE29F8A77FA2CCF8D481AC7 /* MJRefreshBackGifFooter.m in Sources */,
+				8BE70B4511E376EF79284AC782541958 /* MJRefreshBackNormalFooter.m in Sources */,
+				BFE58ADAF3535B807B6F360E82AC422F /* MJRefreshBackStateFooter.m in Sources */,
+				2ADB228BC1DEE519FFA2BDA98403C76C /* MJRefreshComponent.m in Sources */,
+				A363528B7E5AD5CAE0EF16967FAB5513 /* MJRefreshConfig.m in Sources */,
+				25E3C98FB05563DFA0803F9D85DCED03 /* MJRefreshConst.m in Sources */,
+				1B9D8756296CAC95F9F3F0C1369064C5 /* MJRefreshFooter.m in Sources */,
+				41A849FD415D23138C168D68DDCC315F /* MJRefreshGifHeader.m in Sources */,
+				A6A1E7EEDAA62C997DDD67FC51116F2B /* MJRefreshHeader.m in Sources */,
+				829096BB133DB7757B1FBFD9FBF559D3 /* MJRefreshNormalHeader.m in Sources */,
+				7921B4D22EEB6C59956DAB28FB17DA02 /* MJRefreshStateHeader.m in Sources */,
+				B6F59CFCB1B5C81A6AA5C6C1C610B439 /* NSBundle+MJRefresh.m in Sources */,
+				095F3C503CB2FE8E49313FDF284BA522 /* UIScrollView+MJExtension.m in Sources */,
+				B4FBA7C4B92E5A1C0AD37ABDF0AA6C13 /* UIScrollView+MJRefresh.m in Sources */,
+				B32417D8F3501827770402E7C5121BE6 /* UIView+MJExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		994AB4A78A28BD478EEE6A8145F25644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCFB6897BF510A8680B3AD1BDE11BC16 /* SVIndefiniteAnimatedView.m in Sources */,
+				FA35FE72909EB4FCFA1028E71373E2EF /* SVProgressAnimatedView.m in Sources */,
+				E24CD612F0E3703041BEBEB83B418938 /* SVProgressHUD-dummy.m in Sources */,
+				0CCA214D24EFB57D5738035EA1F635D8 /* SVProgressHUD.m in Sources */,
+				F02579CF0F1F091EA00313A9FEFF9516 /* SVRadialGradientLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C32700A1F89002B38A57E95436C1DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68CABABC7CAE708E8D466D1EABCD1012 /* QRCameraSwitchButton.m in Sources */,
+				161BDA6A0971E84071803054E97F53E3 /* QRCodeReader.m in Sources */,
+				065314D2B2F9A8F11945338AF442687F /* QRCodeReaderAanimationLineView.m in Sources */,
+				64C58BCA8C7EAEAD7A333B25FA6652D9 /* QRCodeReaderMaskView.m in Sources */,
+				898DD2D6B037B8C5DA870DCCFBADB47E /* QRCodeReaderView.m in Sources */,
+				5E4B0E9670746616DF8D689115C65E2F /* QRCodeReaderViewController-dummy.m in Sources */,
+				C15E256ECBEF8CA2144819E12C81430D /* QRCodeReaderViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1B2A5EFAD7E39FEEF676AEB98E1DB2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B815B7977B3EF5E3627767C2FB383FC1 /* MJExtension-dummy.m in Sources */,
+				D147F4D4AF791EBA9430EA3E7DB2288D /* MJExtensionConst.m in Sources */,
+				D331894E7FCD61A105B437459C1FB59F /* MJFoundation.m in Sources */,
+				36B3F1C047392BF452B2BA995D573CE6 /* MJProperty.m in Sources */,
+				4CAA6A2CAA60898A5732E7BCB2526DC6 /* MJPropertyKey.m in Sources */,
+				3731D5A272A50C5DDFFAF43B6D514B14 /* MJPropertyType.m in Sources */,
+				C56330817DA6C77A1EFA11A43AF37012 /* NSObject+MJClass.m in Sources */,
+				700EFAEA65A951F527A435B1FC88DBC8 /* NSObject+MJCoding.m in Sources */,
+				2744C6447F6EFCEE989E426A82244B3A /* NSObject+MJKeyValue.m in Sources */,
+				FEFDFEB35504EE8FB0CFA313948E2A82 /* NSObject+MJProperty.m in Sources */,
+				DCB5098E40D947979639886A70DD9450 /* NSString+MJExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B2A6DF3B9C7C9BB20F43F095B7E880D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = 1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */;
+			targetProxy = CD7D06B55F460A0326DD3E00C167EB9D /* PBXContainerItemProxy */;
+		};
+		2EA1C1C944974B247783630840E2E79A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCAnalytics;
+			target = FD2E8643412994484A50DA7D3BFB1EFC /* UMCAnalytics */;
+			targetProxy = C97349AB6912F8720A83840935F0B3A7 /* PBXContainerItemProxy */;
+		};
+		51DDFA3A00CEAB93CC299420FEE083CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCSecurityPlugins;
+			target = 8B5BB4D9C85FBB3B774B6C624239821A /* UMCSecurityPlugins */;
+			targetProxy = 5B13AD0FA99055A0A302ACF1455DD548 /* PBXContainerItemProxy */;
+		};
+		60E1CF73020B7B48CBAD8B5E47E7C014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReaderViewController;
+			target = C8FC4FD750AC24CAD841A7FB89CA76C6 /* QRCodeReaderViewController */;
+			targetProxy = BF835804344DF7CF1780ABEA55465309 /* PBXContainerItemProxy */;
+		};
+		8AF4DDC7529295017C98D4354597CDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCErrorCatch;
+			target = 59CEE9D6F6016BD1B1C9DB3F7774066F /* UMCErrorCatch */;
+			targetProxy = 1700E74D79802200DFE9B2872B19EEE0 /* PBXContainerItemProxy */;
+		};
+		8BE17B540B74580EC2C46A5F8DECFD85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJRefresh;
+			target = 6868056D761E163D10FDAF8CF1C4D9B8 /* MJRefresh */;
+			targetProxy = 6D9D0559629FFF02405E5B0B64EA6E11 /* PBXContainerItemProxy */;
+		};
+		B4E9EC188E8530451683B0633D4E6457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJExtension;
+			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
+			targetProxy = B391FD3E8F4495602A9FF87DD53D3DC1 /* PBXContainerItemProxy */;
+		};
+		D6F37A14E44787E5115BD54D5A2580C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCCommon;
+			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
+			targetProxy = 53023D3FFE4E5A2884C7F8871827AE08 /* PBXContainerItemProxy */;
+		};
+		E4D65337327B590BC199C13F75FF9DB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCCommon;
+			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
+			targetProxy = 14CDA15A149E5E0CB6EA4239A01D5A31 /* PBXContainerItemProxy */;
+		};
+		E826B5DA48D12046E86B3B0486724FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMengUShare;
+			target = E61FA54B27DC950F09491A8994516EA6 /* UMengUShare */;
+			targetProxy = A0E2D2B9E67B1BFCAD3FFCA0D7599A24 /* PBXContainerItemProxy */;
+		};
+		FBC46732E52ED9F472B92C49CAF71385 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCCommon;
+			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
+			targetProxy = 96C4DDE0A7D660E30CFB27E11229E11D /* PBXContainerItemProxy */;
+		};
+		FC7FBA2691A1ECAD3C842C1D7CA5C77B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SGQRCode;
+			target = 2035A387A5D5D85BEF7F693731454A3D /* SGQRCode */;
+			targetProxy = 291BA652A712BD2C8A13BE6581C54C28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03B0426F242762D2EC5AEE3A41F3F9D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BF723F41FD63947703DC92C478B2A2 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SVProgressHUD;
+				PRODUCT_NAME = SVProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BB4C80E3E21465A93632E48C687BC18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37FF532C7F813CEEADEF8B86B2AD3C4 /* UMCAnalytics.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10E4B93F37954EBC132641842930E685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B0FABD4F481269B5FDC20DA5E0E8DA4 /* UMCCommon.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		299730B156DC5D2B5828CBA977DF24C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A538CE36BA17DFF080FA1D4D70C2DBA4 /* UMCErrorCatch.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3025E465E5856A35AFDBC668144BC0B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0720434C0836EFF9AA22F2FDBD0306F5 /* Pods-FangZhiAPP.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		304B57FE484F01E427D00E3E9B67E088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4B86BBEF1689424D5C3CCDE8F67353F /* MJExtension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MJExtension;
+				PRODUCT_NAME = MJExtension;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37C7AEF7DE659A8F41AD37714250C6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0004A5A388F33CB52AE4255D526773 /* MJRefresh.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MJRefresh;
+				PRODUCT_NAME = MJRefresh;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6561FAE85022D29341484D0B8B74333B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D2F1ADDEC8AA746DA90E2FD568CF59 /* SGQRCode.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SGQRCode/SGQRCode-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SGQRCode;
+				PRODUCT_NAME = SGQRCode;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		699D1EADF981B850E9727EA2AEE94CA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0473DE8BA657F7ED82E7ACC0BA932E3D /* UMCSecurityPlugins.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79B61A70672068C5B20F1C40B16ADB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37FF532C7F813CEEADEF8B86B2AD3C4 /* UMCAnalytics.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8478E99C1DD3B3AB370E56C3D4A053EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9842CAC8DB2FEB3264C714AD3B582E /* Pods-FangZhiAPP.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		91CCD64C26124573ED8CE12E0A63C26F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0004A5A388F33CB52AE4255D526773 /* MJRefresh.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MJRefresh;
+				PRODUCT_NAME = MJRefresh;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A72FCC32AD7E761FB1FCB22141BC968D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDEC4FF59AD47BCBBC67DA76F7C65160 /* QRCodeReaderViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReaderViewController/QRCodeReaderViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = QRCodeReaderViewController;
+				PRODUCT_NAME = QRCodeReaderViewController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6033019A0A14B6722CBF4D2C41AF388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDEC4FF59AD47BCBBC67DA76F7C65160 /* QRCodeReaderViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReaderViewController/QRCodeReaderViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = QRCodeReaderViewController;
+				PRODUCT_NAME = QRCodeReaderViewController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD287B7041CB75933E017D9FC80C6791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B0FABD4F481269B5FDC20DA5E0E8DA4 /* UMCCommon.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D35E77CA02D2224756BE536477080C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4B86BBEF1689424D5C3CCDE8F67353F /* MJExtension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MJExtension;
+				PRODUCT_NAME = MJExtension;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCD9158CA1DC7F1A968CF6065AE5A328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BF723F41FD63947703DC92C478B2A2 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SVProgressHUD;
+				PRODUCT_NAME = SVProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4EB37CC014DF10BF1FE5F27EB5C40C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0473DE8BA657F7ED82E7ACC0BA932E3D /* UMCSecurityPlugins.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E638112821198C6D3F881E857ADA45D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13CEA1C8B0001C55F60E6D124C8EAFFF /* UMengUShare.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0C3FC93DFCC46B83D603FF9DF4B3D72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D2F1ADDEC8AA746DA90E2FD568CF59 /* SGQRCode.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SGQRCode/SGQRCode-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SGQRCode;
+				PRODUCT_NAME = SGQRCode;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F35866D1AE4400B742C2762A77067590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13CEA1C8B0001C55F60E6D124C8EAFFF /* UMengUShare.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA937BDD72904155CF4411D57395AF1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A538CE36BA17DFF080FA1D4D70C2DBA4 /* UMCErrorCatch.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AB572C555CB9F73E058CDA90732AF60 /* Build configuration list for PBXAggregateTarget "UMCAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BB4C80E3E21465A93632E48C687BC18 /* Debug */,
+				79B61A70672068C5B20F1C40B16ADB42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		190655FCAD77AF902F754A3C659ACED2 /* Build configuration list for PBXAggregateTarget "UMCSecurityPlugins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4EB37CC014DF10BF1FE5F27EB5C40C8 /* Debug */,
+				699D1EADF981B850E9727EA2AEE94CA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31EB4E584F1521766C849E763982B8A0 /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D35E77CA02D2224756BE536477080C /* Debug */,
+				304B57FE484F01E427D00E3E9B67E088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36A6937C0B0BAE7CACB845B79808F293 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD9158CA1DC7F1A968CF6065AE5A328 /* Debug */,
+				03B0426F242762D2EC5AEE3A41F3F9D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409ABA0B24E7C834C540489EF48499B4 /* Build configuration list for PBXAggregateTarget "UMCErrorCatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA937BDD72904155CF4411D57395AF1B /* Debug */,
+				299730B156DC5D2B5828CBA977DF24C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEEDA8C0720EB1512D73383FC99DBCA /* Build configuration list for PBXAggregateTarget "UMCCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD287B7041CB75933E017D9FC80C6791 /* Debug */,
+				10E4B93F37954EBC132641842930E685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E2F4D473B8263B65622ACB5794CEE6C /* Build configuration list for PBXAggregateTarget "UMengUShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35866D1AE4400B742C2762A77067590 /* Debug */,
+				E638112821198C6D3F881E857ADA45D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7314C7E2611A208378169A60F43FCF04 /* Build configuration list for PBXNativeTarget "Pods-FangZhiAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3025E465E5856A35AFDBC668144BC0B4 /* Debug */,
+				8478E99C1DD3B3AB370E56C3D4A053EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9412E813528B8C541FD280043CCBFB89 /* Build configuration list for PBXNativeTarget "SGQRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0C3FC93DFCC46B83D603FF9DF4B3D72 /* Debug */,
+				6561FAE85022D29341484D0B8B74333B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		948AFFFDD304B359F7F30908A10C002F /* Build configuration list for PBXNativeTarget "MJRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91CCD64C26124573ED8CE12E0A63C26F /* Debug */,
+				37C7AEF7DE659A8F41AD37714250C6BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9DB7EE9739FE43BA2E6F1B5C2CA0980 /* Build configuration list for PBXNativeTarget "QRCodeReaderViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6033019A0A14B6722CBF4D2C41AF388 /* Debug */,
+				A72FCC32AD7E761FB1FCB22141BC968D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
