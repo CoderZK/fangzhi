@@ -25,6 +25,16 @@
 #define WXAppID @"wx75f90eee898b84c6"
 #define WXAppSecret @"c447c6c5c62568576ebcecde57d4f4cd"
 
+
+/**
+ 苹果账号密码
+ 用户名：webmaster@yarnscolors.com
+
+ 密码：YARNS&colors.com5116
+ 
+ */
+
+
 @interface AppDelegate ()
 
 @end
